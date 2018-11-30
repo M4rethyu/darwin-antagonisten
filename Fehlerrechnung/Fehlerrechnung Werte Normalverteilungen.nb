@@ -1,0 +1,403 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     16261,        393]
+NotebookOptionsPosition[     14544,        332]
+NotebookOutlinePosition[     15440,        363]
+CellTagsIndexPosition[     15269,        356]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"?", "Table"}]], "Input",
+ CellChangeTimes->{{3.751566216038949*^9, 3.751566251535548*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox["\<\"\\!\\(\\*RowBox[{\\\"Table\\\", \\\"[\\\", \
+RowBox[{StyleBox[\\\"expr\\\", \\\"TI\\\"], \\\",\\\", StyleBox[\\\"n\\\", \\\
+\"TI\\\"]}], \\\"]\\\"}]\\) generates a list of \\!\\(\\*StyleBox[\\\"n\\\", \
+\\\"TI\\\"]\\) copies of \\!\\(\\*StyleBox[\\\"expr\\\", \\\"TI\\\"]\\). \
+\\n\\!\\(\\*RowBox[{\\\"Table\\\", \\\"[\\\", RowBox[{StyleBox[\\\"expr\\\", \
+\\\"TI\\\"], \\\",\\\", RowBox[{\\\"{\\\", RowBox[{StyleBox[\\\"i\\\", \\\"TI\
+\\\"], \\\",\\\", SubscriptBox[StyleBox[\\\"i\\\", \\\"TI\\\"], \
+StyleBox[\\\"max\\\", \\\"TI\\\"]]}], \\\"}\\\"}]}], \\\"]\\\"}]\\) generates \
+a list of the values of \\!\\(\\*StyleBox[\\\"expr\\\", \\\"TI\\\"]\\) when \
+\\!\\(\\*StyleBox[\\\"i\\\", \\\"TI\\\"]\\) runs from 1 to \
+\\!\\(\\*SubscriptBox[StyleBox[\\\"i\\\", \\\"TI\\\"], StyleBox[\\\"max\\\", \
+\\\"TI\\\"]]\\). \\n\\!\\(\\*RowBox[{\\\"Table\\\", \\\"[\\\", \
+RowBox[{StyleBox[\\\"expr\\\", \\\"TI\\\"], \\\",\\\", RowBox[{\\\"{\\\", \
+RowBox[{StyleBox[\\\"i\\\", \\\"TI\\\"], \\\",\\\", \
+SubscriptBox[StyleBox[\\\"i\\\", \\\"TI\\\"], StyleBox[\\\"min\\\", \
+\\\"TI\\\"]], \\\",\\\", SubscriptBox[StyleBox[\\\"i\\\", \\\"TI\\\"], \
+StyleBox[\\\"max\\\", \\\"TI\\\"]]}], \\\"}\\\"}]}], \\\"]\\\"}]\\) starts \
+with \\!\\(\\*RowBox[{StyleBox[\\\"i\\\", \\\"TI\\\"], \\\"=\\\", \
+SubscriptBox[StyleBox[\\\"i\\\", \\\"TI\\\"], StyleBox[\\\"min\\\", \
+\\\"TI\\\"]]}]\\). \\n\\!\\(\\*RowBox[{\\\"Table\\\", \\\"[\\\", \
+RowBox[{StyleBox[\\\"expr\\\", \\\"TI\\\"], \\\",\\\", RowBox[{\\\"{\\\", \
+RowBox[{StyleBox[\\\"i\\\", \\\"TI\\\"], \\\",\\\", \
+SubscriptBox[StyleBox[\\\"i\\\", \\\"TI\\\"], StyleBox[\\\"min\\\", \
+\\\"TI\\\"]], \\\",\\\", SubscriptBox[StyleBox[\\\"i\\\", \\\"TI\\\"], \
+StyleBox[\\\"max\\\", \\\"TI\\\"]], \\\",\\\", StyleBox[\\\"di\\\", \
+\\\"TI\\\"]}], \\\"}\\\"}]}], \\\"]\\\"}]\\) uses steps \
+\\!\\(\\*StyleBox[\\\"di\\\", \\\"TI\\\"]\\). \\n\\!\\(\\*RowBox[{\\\"Table\\\
+\", \\\"[\\\", RowBox[{StyleBox[\\\"expr\\\", \\\"TI\\\"], \\\",\\\", \
+RowBox[{\\\"{\\\", RowBox[{StyleBox[\\\"i\\\", \\\"TI\\\"], \\\",\\\", \
+RowBox[{\\\"{\\\", RowBox[{SubscriptBox[StyleBox[\\\"i\\\", \\\"TI\\\"], \
+StyleBox[\\\"1\\\", \\\"TR\\\"]], \\\",\\\", SubscriptBox[StyleBox[\\\"i\\\", \
+\\\"TI\\\"], StyleBox[\\\"2\\\", \\\"TR\\\"]], \\\",\\\", StyleBox[\\\"\
+\[Ellipsis]\\\", \\\"TR\\\"]}], \\\"}\\\"}]}], \\\"}\\\"}]}], \\\"]\\\"}]\\) \
+uses the successive values \\!\\(\\*SubscriptBox[StyleBox[\\\"i\\\", \\\"TI\\\
+\"], StyleBox[\\\"1\\\", \\\"TR\\\"]]\\), \
+\\!\\(\\*SubscriptBox[StyleBox[\\\"i\\\", \\\"TI\\\"], StyleBox[\\\"2\\\", \\\
+\"TR\\\"]]\\), \[Ellipsis].\\n\\!\\(\\*RowBox[{\\\"Table\\\", \\\"[\\\", \
+RowBox[{StyleBox[\\\"expr\\\", \\\"TI\\\"], \\\",\\\", RowBox[{\\\"{\\\", \
+RowBox[{StyleBox[\\\"i\\\", \\\"TI\\\"], \\\",\\\", \
+SubscriptBox[StyleBox[\\\"i\\\", \\\"TI\\\"], StyleBox[\\\"min\\\", \
+\\\"TI\\\"]], \\\",\\\", SubscriptBox[StyleBox[\\\"i\\\", \\\"TI\\\"], \
+StyleBox[\\\"max\\\", \\\"TI\\\"]]}], \\\"}\\\"}], \\\",\\\", RowBox[{\\\"{\\\
+\", RowBox[{StyleBox[\\\"j\\\", \\\"TI\\\"], \\\",\\\", \
+SubscriptBox[StyleBox[\\\"j\\\", \\\"TI\\\"], StyleBox[\\\"min\\\", \
+\\\"TI\\\"]], \\\",\\\", SubscriptBox[StyleBox[\\\"j\\\", \\\"TI\\\"], \
+StyleBox[\\\"max\\\", \\\"TI\\\"]]}], \\\"}\\\"}], \\\",\\\", StyleBox[\\\"\
+\[Ellipsis]\\\", \\\"TR\\\"]}], \\\"]\\\"}]\\) gives a nested list. The list \
+associated with \\!\\(\\*StyleBox[\\\"i\\\", \\\"TI\\\"]\\) is \
+outermost.\"\>", "MSG"], "\[NonBreakingSpace]", 
+  ButtonBox[
+   StyleBox["\[RightSkeleton]", "SR"],
+   Active->True,
+   BaseStyle->"Link",
+   ButtonData->"paclet:ref/Table"]}]], "Print", "PrintUsage",
+ CellChangeTimes->{3.7515662531275315`*^9},
+ CellTags->"Info13751569852-2153659"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"?", "List"}]], "Input",
+ CellChangeTimes->{{3.7515662597704525`*^9, 3.751566270404337*^9}, {
+  3.7515663357726*^9, 3.751566337669583*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox["\<\"\\!\\(\\*RowBox[{\\\"{\\\", \
+RowBox[{SubscriptBox[StyleBox[\\\"e\\\", \\\"TI\\\"], StyleBox[\\\"1\\\", \
+\\\"TR\\\"]], \\\",\\\", SubscriptBox[StyleBox[\\\"e\\\", \\\"TI\\\"], \
+StyleBox[\\\"2\\\", \\\"TR\\\"]], \\\",\\\", StyleBox[\\\"\[Ellipsis]\\\", \\\
+\"TR\\\"]}], \\\"}\\\"}]\\) is a list of elements. \"\>", "MSG"], 
+  "\[NonBreakingSpace]", 
+  ButtonBox[
+   StyleBox["\[RightSkeleton]", "SR"],
+   Active->True,
+   BaseStyle->"Link",
+   ButtonData->"paclet:ref/List"]}]], "Print", "PrintUsage",
+ CellChangeTimes->{3.7515663381305113`*^9},
+ CellTags->"Info23751569937-2153659"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"List", "[", 
+  RowBox[{
+  "0.015", ",", "0.04", ",", "0.09", ",", "0.14", ",", "0.14", ",", "0.11", 
+   ",", "0.067", ",", "0.056", ",", "0.049", ",", "0.054", ",", "0.053", ",", 
+   "0.048", ",", "0.04", ",", "0.037", ",", "0.025"}], "]"}]], "Input",
+ CellChangeTimes->{{3.751566369455227*^9, 3.7515664482933364`*^9}, {
+  3.751566478951991*^9, 3.751566497681754*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "0.015`", ",", "0.04`", ",", "0.09`", ",", "0.14`", ",", "0.14`", ",", 
+   "0.11`", ",", "0.067`", ",", "0.056`", ",", "0.049`", ",", "0.054`", ",", 
+   "0.053`", ",", "0.048`", ",", "0.04`", ",", "0.037`", ",", "0.025`"}], 
+  "}"}]], "Output",
+ CellChangeTimes->{3.7515664993037653`*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"L1", ":=", " ", 
+  RowBox[{"{", "%", "}"}]}]], "Input",
+ CellChangeTimes->{{3.751566516224574*^9, 3.7515665579161015`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"List\[ADoubleDot]2", "=", 
+  RowBox[{"{", 
+   RowBox[{
+   "0.015", ",", "0.055", ",", "0.145", ",", "0.285", ",", "0.425", ",", 
+    "0.535", ",", "0.602", ",", "0.658", ",", "0.707", ",", "0.761", ",", 
+    "0.814", ",", "0.862", ",", "0.902", ",", "0.939", ",", "0.964"}], 
+   "}"}]}]], "Input",
+ CellChangeTimes->{{3.7515665625380507`*^9, 3.751566673060812*^9}, {
+  3.7515667249852247`*^9, 3.751566993665208*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "0.015`", ",", "0.055`", ",", "0.145`", ",", "0.285`", ",", "0.425`", ",", 
+   "0.535`", ",", "0.602`", ",", "0.658`", ",", "0.707`", ",", "0.761`", ",", 
+   "0.814`", ",", "0.862`", ",", "0.902`", ",", "0.939`", ",", "0.964`"}], 
+  "}"}]], "Output",
+ CellChangeTimes->{3.751566994710189*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ListLinePlot", "[", "List\[ADoubleDot]2", "]"}]], "Input",
+ CellChangeTimes->{{3.751567040190687*^9, 3.751567040905672*^9}},
+ NumberMarks->False],
+
+Cell[BoxData[
+ GraphicsBox[{{}, {{}, {}, 
+    {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.019444444444444445`],
+      AbsoluteThickness[1.6], 
+     LineBox[{{1., 0.015}, {2., 0.055}, {3., 0.145}, {4., 0.285}, {5., 
+      0.425}, {6., 0.535}, {7., 0.602}, {8., 0.658}, {9., 0.707}, {10., 
+      0.761}, {11., 0.814}, {12., 0.862}, {13., 0.902}, {14., 0.939}, {15., 
+      0.964}}]}}, {}, {}, {{}, {}}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->{True, True},
+  AxesLabel->{None, None},
+  AxesOrigin->{0., 0},
+  DisplayFunction->Identity,
+  Frame->{{False, False}, {False, False}},
+  FrameLabel->{{None, None}, {None, None}},
+  FrameTicks->{{Automatic, Automatic}, {Automatic, Automatic}},
+  GridLines->{None, None},
+  GridLinesStyle->Directive[
+    GrayLevel[0.5, 0.4]],
+  ImagePadding->All,
+  ImageSize->{554., Automatic},
+  Method->{"CoordinatesToolOptions" -> {"DisplayFunction" -> ({
+        (Part[{{Identity, Identity}, {Identity, Identity}}, 1, 2][#]& )[
+         Part[#, 1]], 
+        (Part[{{Identity, Identity}, {Identity, Identity}}, 2, 2][#]& )[
+         Part[#, 2]]}& ), "CopiedValueFunction" -> ({
+        (Part[{{Identity, Identity}, {Identity, Identity}}, 1, 2][#]& )[
+         Part[#, 1]], 
+        (Part[{{Identity, Identity}, {Identity, Identity}}, 2, 2][#]& )[
+         Part[#, 2]]}& )}},
+  PlotRange->{{0., 15.}, {0, 0.964}},
+  PlotRangeClipping->True,
+  PlotRangePadding->{{
+     Scaled[0.02], 
+     Scaled[0.02]}, {
+     Scaled[0.02], 
+     Scaled[0.05]}},
+  Ticks->{Automatic, Automatic}]], "Output",
+ CellChangeTimes->{3.7515669997762156`*^9, 3.7515670421586313`*^9}]
+}, Open  ]],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.7515666828176985`*^9, 3.7515667193202915`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"?", "ListLinePlot"}]], "Input",
+ CellChangeTimes->{{3.7515670111750126`*^9, 3.7515670190179195`*^9}, {
+  3.751567146030492*^9, 3.7515671466764812`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["System`ListLinePlot", "Print", "PrintUsage",
+ CellChangeTimes->{3.751567147267476*^9},
+ CellTags->"Info123751570747-2153659"],
+
+Cell[BoxData[
+ InterpretationBox[GridBox[{
+    {
+     RowBox[{
+      RowBox[{"Attributes", "[", "ListLinePlot", "]"}], "=", 
+      RowBox[{"{", 
+       RowBox[{"Protected", ",", "ReadProtected"}], "}"}]}]},
+    {" "},
+    {GridBox[{
+       {
+        RowBox[{
+         RowBox[{"Options", "[", "ListLinePlot", "]"}], "=", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"AlignmentPoint", "\[Rule]", "Center"}], ",", 
+           RowBox[{"AspectRatio", "\[Rule]", 
+            FractionBox["1", "GoldenRatio"]}], ",", 
+           RowBox[{"Axes", "\[Rule]", "True"}], ",", 
+           RowBox[{"AxesLabel", "\[Rule]", "None"}], ",", 
+           RowBox[{"AxesOrigin", "\[Rule]", "Automatic"}], ",", 
+           RowBox[{"AxesStyle", "\[Rule]", 
+            RowBox[{"{", "}"}]}], ",", 
+           RowBox[{"Background", "\[Rule]", "None"}], ",", 
+           RowBox[{"BaselinePosition", "\[Rule]", "Automatic"}], ",", 
+           RowBox[{"BaseStyle", "\[Rule]", 
+            RowBox[{"{", "}"}]}], ",", 
+           RowBox[{"ClippingStyle", "\[Rule]", "None"}], ",", 
+           RowBox[{"ColorFunction", "\[Rule]", "Automatic"}], ",", 
+           RowBox[{"ColorFunctionScaling", "\[Rule]", "True"}], ",", 
+           RowBox[{"ColorOutput", "\[Rule]", "Automatic"}], ",", 
+           RowBox[{"ContentSelectable", "\[Rule]", "Automatic"}], ",", 
+           RowBox[{"CoordinatesToolOptions", "\[Rule]", "Automatic"}], ",", 
+           RowBox[{"DataRange", "\[Rule]", "Automatic"}], ",", 
+           RowBox[{"DisplayFunction", "\[RuleDelayed]", "$DisplayFunction"}], 
+           ",", 
+           RowBox[{"Epilog", "\[Rule]", 
+            RowBox[{"{", "}"}]}], ",", 
+           RowBox[{"Filling", "\[Rule]", "None"}], ",", 
+           RowBox[{"FillingStyle", "\[Rule]", "Automatic"}], ",", 
+           RowBox[{
+           "FormatType", "\[RuleDelayed]", "\<\"TraditionalForm\"\>"}], ",", 
+           RowBox[{"Frame", "\[Rule]", "False"}], ",", 
+           RowBox[{"FrameLabel", "\[Rule]", "None"}], ",", 
+           RowBox[{"FrameStyle", "\[Rule]", 
+            RowBox[{"{", "}"}]}], ",", 
+           RowBox[{"FrameTicks", "\[Rule]", "Automatic"}], ",", 
+           RowBox[{"FrameTicksStyle", "\[Rule]", 
+            RowBox[{"{", "}"}]}], ",", 
+           RowBox[{"GridLines", "\[Rule]", "None"}], ",", 
+           RowBox[{"GridLinesStyle", "\[Rule]", 
+            RowBox[{"{", "}"}]}], ",", 
+           RowBox[{"ImageMargins", "\[Rule]", "0.`"}], ",", 
+           RowBox[{"ImagePadding", "\[Rule]", "All"}], ",", 
+           RowBox[{"ImageSize", "\[Rule]", "Automatic"}], ",", 
+           RowBox[{"ImageSizeRaw", "\[Rule]", "Automatic"}], ",", 
+           RowBox[{"InterpolationOrder", "\[Rule]", "None"}], ",", 
+           RowBox[{"Joined", "\[Rule]", "True"}], ",", 
+           RowBox[{"LabelingFunction", "\[Rule]", "Automatic"}], ",", 
+           RowBox[{"LabelStyle", "\[Rule]", 
+            RowBox[{"{", "}"}]}], ",", 
+           RowBox[{"MaxPlotPoints", "\[Rule]", "\[Infinity]"}], ",", 
+           RowBox[{"Mesh", "\[Rule]", "None"}], ",", 
+           RowBox[{"MeshFunctions", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{"#1", "&"}], "}"}]}], ",", 
+           RowBox[{"MeshShading", "\[Rule]", "None"}], ",", 
+           RowBox[{"MeshStyle", "\[Rule]", "Automatic"}], ",", 
+           RowBox[{"Method", "\[Rule]", "Automatic"}], ",", 
+           RowBox[{"PerformanceGoal", "\[RuleDelayed]", "$PerformanceGoal"}], 
+           ",", 
+           RowBox[{"PlotLabel", "\[Rule]", "None"}], ",", 
+           RowBox[{"PlotLabels", "\[Rule]", "None"}], ",", 
+           RowBox[{"PlotLegends", "\[Rule]", "None"}], ",", 
+           RowBox[{"PlotMarkers", "\[Rule]", "None"}], ",", 
+           RowBox[{"PlotRange", "\[Rule]", "Automatic"}], ",", 
+           RowBox[{"PlotRangeClipping", "\[Rule]", "True"}], ",", 
+           RowBox[{"PlotRangePadding", "\[Rule]", "Automatic"}], ",", 
+           RowBox[{"PlotRegion", "\[Rule]", "Automatic"}], ",", 
+           RowBox[{"PlotStyle", "\[Rule]", "Automatic"}], ",", 
+           RowBox[{"PlotTheme", "\[RuleDelayed]", "$PlotTheme"}], ",", 
+           RowBox[{"PreserveImageOptions", "\[Rule]", "Automatic"}], ",", 
+           RowBox[{"Prolog", "\[Rule]", 
+            RowBox[{"{", "}"}]}], ",", 
+           RowBox[{"RotateLabel", "\[Rule]", "True"}], ",", 
+           RowBox[{"ScalingFunctions", "\[Rule]", "None"}], ",", 
+           RowBox[{"TargetUnits", "\[Rule]", "Automatic"}], ",", 
+           RowBox[{"Ticks", "\[Rule]", "Automatic"}], ",", 
+           RowBox[{"TicksStyle", "\[Rule]", 
+            RowBox[{"{", "}"}]}]}], "}"}]}]}
+      },
+      BaselinePosition->{Baseline, {1, 1}},
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxItemSize->{"Columns" -> {{
+           Scaled[0.999]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+        "RowsIndexed" -> {}}]}
+   },
+   BaselinePosition->{Baseline, {1, 1}},
+   GridBoxAlignment->{
+    "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+     "RowsIndexed" -> {}}],
+  Definition[ListLinePlot],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.751567147334552*^9},
+ CellTags->"Info123751570747-2153659"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{681, 676},
+WindowMargins->{{-7, Automatic}, {Automatic, 0}},
+FrontEndVersion->"11.0 for Microsoft Windows (64-bit) (September 21, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "Info13751569852-2153659"->{
+  Cell[697, 26, 3726, 57, 151, "Print",
+   CellTags->"Info13751569852-2153659"]},
+ "Info23751569937-2153659"->{
+  Cell[4625, 93, 624, 14, 43, "Print",
+   CellTags->"Info23751569937-2153659"]},
+ "Info123751570747-2153659"->{
+  Cell[9147, 219, 131, 2, 41, "Print",
+   CellTags->"Info123751570747-2153659"],
+  Cell[9281, 223, 5235, 105, 410, "Print",
+   CellTags->"Info123751570747-2153659"]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"Info13751569852-2153659", 14855, 342},
+ {"Info23751569937-2153659", 14967, 345},
+ {"Info123751570747-2153659", 15079, 348}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 114, 2, 30, "Input"],
+Cell[697, 26, 3726, 57, 151, "Print",
+ CellTags->"Info13751569852-2153659"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4460, 88, 162, 3, 30, "Input"],
+Cell[4625, 93, 624, 14, 43, "Print",
+ CellTags->"Info23751569937-2153659"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5286, 112, 392, 7, 50, "Input"],
+Cell[5681, 121, 330, 7, 50, "Output"]
+}, Open  ]],
+Cell[6026, 131, 147, 3, 30, "Input"],
+Cell[CellGroupData[{
+Cell[6198, 138, 440, 9, 50, "Input"],
+Cell[6641, 149, 334, 7, 50, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7012, 161, 169, 3, 30, "Input"],
+Cell[7184, 166, 1626, 38, 364, "Output"]
+}, Open  ]],
+Cell[8825, 207, 96, 1, 30, "Input"],
+Cell[CellGroupData[{
+Cell[8946, 212, 176, 3, 30, "Input"],
+Cell[CellGroupData[{
+Cell[9147, 219, 131, 2, 41, "Print",
+ CellTags->"Info123751570747-2153659"],
+Cell[9281, 223, 5235, 105, 410, "Print",
+ CellTags->"Info123751570747-2153659"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
