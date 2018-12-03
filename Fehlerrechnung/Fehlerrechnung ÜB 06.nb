@@ -1,0 +1,408 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     12588,        398]
+NotebookOptionsPosition[     10975,        342]
+NotebookOutlinePosition[     11353,        358]
+CellTagsIndexPosition[     11310,        355]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell["Fehlerrechnung Blatt 06:", "Text",
+ CellChangeTimes->{{3.7525847544349895`*^9, 3.752584764972967*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"a", ":=", "1.570"}], ";", " ", 
+  RowBox[{"\[CapitalDelta]a", ":=", " ", "0.020"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"b", ":=", "1.0518"}], ";", " ", 
+  RowBox[{"\[CapitalDelta]b", ":=", "0.0040"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"x", ":=", "1.209"}], ";", 
+  RowBox[{"\[CapitalDelta]x", ":=", "0.033"}]}]}], "Input",
+ CellChangeTimes->{{3.7525848085453587`*^9, 3.7525849252830315`*^9}}],
+
+Cell["Nummer 1:", "Text",
+ CellChangeTimes->{{3.7525847891335816`*^9, 3.75258479180456*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  SubscriptBox["y", "1"], ":=", 
+  RowBox[{
+   RowBox[{"13", "a", "*", "x"}], "+", 
+   RowBox[{"14", "b", "*", "a", "*", 
+    SuperscriptBox["x", "2"]}], "+", 
+   RowBox[{"21", "*", "a", "*", 
+    SuperscriptBox["b", "3"]}]}]}]], "Input",
+ CellChangeTimes->{{3.7525847980015364`*^9, 3.7525847992804704`*^9}, {
+  3.7525849329429345`*^9, 3.752584981980342*^9}, {3.7525850444725933`*^9, 
+  3.7525850449505863`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ SubscriptBox["y", "1"]], "Input",
+ CellChangeTimes->{
+  3.752584987726142*^9, {3.7525850506705203`*^9, 3.752585051132434*^9}}],
+
+Cell[BoxData["96.83117557518506`"], "Output",
+ CellChangeTimes->{3.7525849883291903`*^9, 3.7525850518264294`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  SubscriptBox["y", "2"], ":=", 
+  RowBox[{"Exp", "[", 
+   FractionBox[
+    RowBox[{"a", "-", "x"}], "x"], "]"}]}], "\[IndentingNewLine]", 
+ SubscriptBox["y", "2"]}], "Input",
+ CellChangeTimes->{{3.752585054145401*^9, 3.7525850991037908`*^9}}],
+
+Cell[BoxData["1.3479620769110037`"], "Output",
+ CellChangeTimes->{3.752585099454822*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  SubscriptBox["y", "3"], ":=", 
+  RowBox[{"b", "*", 
+   RowBox[{"Sin", "[", 
+    RowBox[{"a", "*", "x"}], "]"}]}]}], "\[IndentingNewLine]", 
+ SubscriptBox["y", "3"]}], "Input",
+ CellChangeTimes->{{3.752585107606834*^9, 3.752585141784413*^9}}],
+
+Cell[BoxData["0.9959525588522414`"], "Output",
+ CellChangeTimes->{{3.7525851294174824`*^9, 3.752585142752329*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  SubscriptBox["y", "4"], ":=", 
+  FractionBox[
+   RowBox[{"x", "-", "a"}], 
+   RowBox[{"b", "+", "x"}]]}], "\[IndentingNewLine]", 
+ SubscriptBox["y", "4"]}], "Input",
+ CellChangeTimes->{{3.7525852156125298`*^9, 3.7525852535429873`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"-", "0.15967799009200281`"}]], "Output",
+ CellChangeTimes->{3.752585254177977*^9}]
+}, Open  ]],
+
+Cell["Nummer 2:", "Text",
+ CellChangeTimes->{{3.752585262142906*^9, 3.752585265110855*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"Durchmessermenge", ":=", 
+  RowBox[{"{", 
+   RowBox[{
+   "1.234", ",", "1.249", ",", "1.243", ",", "1.238", ",", "1.255", ",", 
+    "1.246", ",", "1.252", ",", "1.235", ",", "1.262"}], 
+   "}"}]}], "\[IndentingNewLine]", 
+ RowBox[{"n", ":=", 
+  RowBox[{"Length", "[", "Durchmessermenge", "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"mittelwert", ":=", 
+   RowBox[{"Sum", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"Durchmessermenge", "[", 
+       RowBox[{"[", "i", "]"}], "]"}], "/", "n"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"i", ",", "1", ",", "n"}], "}"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[Sigma]", ":=", 
+   RowBox[{
+    RowBox[{"\[Sqrt]", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"1", "/", 
+        RowBox[{"(", 
+         RowBox[{"n", "-", "1"}], ")"}]}], " ", 
+       RowBox[{"Sum", "[", 
+        RowBox[{
+         SuperscriptBox[
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"Durchmessermenge", "[", 
+             RowBox[{"[", "i", "]"}], "]"}], "-", "mittelwert"}], ")"}], "2"],
+          ",", 
+         RowBox[{"{", 
+          RowBox[{"i", ",", "1", ",", "n"}], "}"}]}], "]"}]}], ")"}]}], 
+    "\[Times]", 
+    SuperscriptBox["10", 
+     RowBox[{"-", "3"}]]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"standardfehler", ":=", " ", 
+   RowBox[{"\[Sigma]", "/", 
+    RowBox[{"(", 
+     RowBox[{"\[Sqrt]", "n"}], ")"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"fehlerintervall", ":=", " ", 
+  RowBox[{
+   RowBox[{"mittelwert", "\[Times]", 
+    SuperscriptBox["10", 
+     RowBox[{"-", "3"}]]}], "\[PlusMinus]", 
+   "standardfehler"}]}], "\[IndentingNewLine]", 
+ RowBox[{"NumberForm", "[", 
+  RowBox[{"fehlerintervall", ",", "16"}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"NumberForm", "[", 
+  RowBox[{"\[Sigma]", ",", "16"}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"NumberForm", "[", 
+  RowBox[{"standardfehler", ",", "16"}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"ScientificForm", "[", "fehlerintervall", 
+  "]"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.7525852946804943`*^9, 3.7525853050214443`*^9}, {
+   3.752585619243802*^9, 3.7525857361354237`*^9}, {3.7525858408561616`*^9, 
+   3.752585857658956*^9}, {3.7525876320666513`*^9, 3.752587680677136*^9}, 
+   3.752587711011694*^9}],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{
+   InterpretationBox["\<\"0.001246\"\>",
+    0.001246,
+    AutoDelete->True], "\[PlusMinus]", 
+   InterpretationBox[
+    RowBox[{"\<\"3.162277660168372\"\>", "\[Times]", 
+     SuperscriptBox["10", "\<\"-6\"\>"]}],
+    3.1622776601683724`*^-6,
+    AutoDelete->True]}],
+  NumberForm[#, 16]& ]], "Output",
+ CellChangeTimes->{{3.7525876823190355`*^9, 3.752587711566684*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  InterpretationBox[
+   RowBox[{"\<\"9.48683298050512\"\>", "\[Times]", 
+    SuperscriptBox["10", "\<\"-6\"\>"]}],
+   9.486832980505117*^-6,
+   AutoDelete->True],
+  NumberForm[#, 16]& ]], "Output",
+ CellChangeTimes->{{3.7525876823190355`*^9, 3.7525877115756845`*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  InterpretationBox[
+   RowBox[{"\<\"3.162277660168372\"\>", "\[Times]", 
+    SuperscriptBox["10", "\<\"-6\"\>"]}],
+   3.1622776601683724`*^-6,
+   AutoDelete->True],
+  NumberForm[#, 16]& ]], "Output",
+ CellChangeTimes->{{3.7525876823190355`*^9, 3.752587711582684*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{
+   InterpretationBox[
+    RowBox[{"\<\"1.246\"\>", "\[Times]", 
+     SuperscriptBox["10", "\<\"-3\"\>"]}],
+    0.001246,
+    AutoDelete->True], "\[PlusMinus]", 
+   InterpretationBox[
+    RowBox[{"\<\"3.16228\"\>", "\[Times]", 
+     SuperscriptBox["10", "\<\"-6\"\>"]}],
+    3.1622776601683724`*^-6,
+    AutoDelete->True]}],
+  ScientificForm]], "Output",
+ CellChangeTimes->{{3.7525876823190355`*^9, 3.752587711588662*^9}}]
+}, Open  ]],
+
+Cell["Weitere Messwerte:", "Text",
+ CellChangeTimes->{{3.752586087962179*^9, 3.7525860941321034`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   SubscriptBox["m", "sm"], " ", "=", 
+   RowBox[{"28.2304", "\[Times]", 
+    SuperscriptBox["10", 
+     RowBox[{"-", "6"}]]}]}], ";", " ", 
+  RowBox[{
+   SubscriptBox["\[CapitalDelta]m", "sm"], "=", 
+   RowBox[{"0.0094", "\[Times]", 
+    SuperscriptBox["10", 
+     RowBox[{"-", "6"}]]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   SubscriptBox["m", "s0"], "=", " ", 
+   RowBox[{"4.0724", "\[Times]", 
+    SuperscriptBox["10", 
+     RowBox[{"-", "6"}]]}]}], ";", " ", 
+  RowBox[{
+   SubscriptBox["\[CapitalDelta]m", "s0"], "=", 
+   RowBox[{"0.0027", "\[Times]", 
+    SuperscriptBox["10", 
+     RowBox[{"-", "6"}]]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"H", " ", "=", " ", 
+    RowBox[{"37.84", "\[Times]", 
+     SuperscriptBox["10", 
+      RowBox[{"-", "2"}]]}]}], ";", 
+   RowBox[{"\[CapitalDelta]H", " ", "=", " ", 
+    RowBox[{"0.38", "\[Times]", 
+     SuperscriptBox["10", 
+      RowBox[{"-", "2"}]]}]}], ";"}], " "}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"t", " ", "=", " ", "85.83"}], ";", 
+  RowBox[{"\[CapitalDelta]t", " ", "=", " ", "0.82"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"\[Rho]", " ", "=", " ", 
+    RowBox[{"0.992", "*", 
+     SuperscriptBox["10", "3"]}]}], ";"}], " "}]}], "Input",
+ CellChangeTimes->{{3.7525861123468823`*^9, 3.752586208091778*^9}, {
+  3.752586260134036*^9, 3.7525862642010493`*^9}, {3.7525863648356113`*^9, 
+  3.7525867296595335`*^9}, {3.752586766665062*^9, 3.752586771367036*^9}}],
+
+Cell["Radius der Kugel:", "Text",
+ CellChangeTimes->{{3.7525868679718695`*^9, 3.7525869163672533`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"RadiusAngabe", " ", ":=", 
+  RowBox[{
+  "mittelwert", " ", "\[PlusMinus]", " ", 
+   "standardfehler"}]}], "\[IndentingNewLine]", "RadiusAngabe"}], "Input",
+ CellChangeTimes->{{3.7525869202882657`*^9, 3.7525869685436773`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"1.246`", "\[PlusMinus]", "0.003162277660168372`"}]], "Output",
+ CellChangeTimes->{3.7525869690306945`*^9}]
+}, Open  ]],
+
+Cell["Masse einer Kugel:", "Text",
+ CellChangeTimes->{{3.7525869953273*^9, 3.7525870000733576`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{"GesamtMasse", ":=", " ", 
+  RowBox[{
+   SubscriptBox["m", "sb"], "-", 
+   SubscriptBox["m", "s0"]}]}], "\[IndentingNewLine]", 
+ RowBox[{"StandardfehlerGesamtMasse", " ", ":=", " ", 
+  RowBox[{
+   SubscriptBox["\[CapitalDelta]m", "sb"], "+", 
+   SubscriptBox["\[CapitalDelta]m", "s0"]}]}]}], "Input",
+ CellChangeTimes->{{3.752587237474492*^9, 3.752587325811346*^9}}],
+
+Cell[BoxData[{
+ RowBox[{"Einzelmasse", ":=", 
+  FractionBox["Gesamtmasse", 
+   RowBox[{"Length", "[", "Durchmessermenge", "]"}]]}], "\[IndentingNewLine]", 
+ RowBox[{"StandardFehlerEinzelmasse", ":=", " ", 
+  FractionBox["StandardfehlerGesamtMasse", 
+   RowBox[{
+   "Length", "[", "Durchmessermenge", 
+    "]"}]]}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.752587012448105*^9, 3.752587047346778*^9}, {
+  3.752587100987131*^9, 3.7525871011731358`*^9}, {3.7525871807901692`*^9, 
+  3.752587231329565*^9}, {3.7525873483171525`*^9, 3.752587399283474*^9}}],
+
+Cell["H\[ODoubleDot]he des Gef\[ADoubleDot]\[SZ]es:", "Text",
+ CellChangeTimes->{{3.752587427888115*^9, 3.7525874331761236`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"H\[ODoubleDot]henAusgabe", " ", ":=", " ", "H", " "}]], "Input",
+ CellChangeTimes->{{3.7525874993483257`*^9, 3.7525875012653084`*^9}, {
+  3.7525875658554516`*^9, 3.752587570856386*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.7525869773535976`*^9, 3.752586984392544*^9}}],
+
+Cell["\<\
+Fallzeit der Kugel:
+t\
+\>", "Text",
+ CellChangeTimes->{{3.7525875344959035`*^9, 3.752587559574597*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.752587521459064*^9, 3.7525875266719975`*^9}}]
+},
+WindowSize->{1366, 725},
+WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+Magnification:>0.9 Inherited,
+FrontEndVersion->"11.0 for Microsoft Windows (64-bit) (September 21, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 108, 1, 28, "Text"],
+Cell[669, 23, 451, 10, 64, "Input"],
+Cell[1123, 35, 92, 1, 28, "Text"],
+Cell[1218, 38, 436, 11, 29, "Input"],
+Cell[CellGroupData[{
+Cell[1679, 53, 141, 3, 27, "Input"],
+Cell[1823, 58, 113, 1, 27, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1973, 64, 268, 7, 63, "Input"],
+Cell[2244, 73, 88, 1, 27, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2369, 79, 268, 7, 46, "Input"],
+Cell[2640, 88, 114, 1, 27, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2791, 94, 262, 7, 63, "Input"],
+Cell[3056, 103, 106, 2, 27, "Output"]
+}, Open  ]],
+Cell[3177, 108, 91, 1, 28, "Text"],
+Cell[CellGroupData[{
+Cell[3293, 113, 2327, 63, 217, "Input"],
+Cell[5623, 178, 404, 12, 41, "Output"],
+Cell[6030, 192, 290, 8, 41, "Output"],
+Cell[6323, 202, 291, 8, 41, "Output"],
+Cell[6617, 212, 455, 14, 41, "Output"]
+}, Open  ]],
+Cell[7087, 229, 102, 1, 28, "Text"],
+Cell[7192, 232, 1536, 44, 105, "Input"],
+Cell[8731, 278, 103, 1, 28, "Text"],
+Cell[CellGroupData[{
+Cell[8859, 283, 250, 5, 46, "Input"],
+Cell[9112, 290, 130, 2, 27, "Output"]
+}, Open  ]],
+Cell[9257, 295, 100, 1, 28, "Text"],
+Cell[9360, 298, 390, 9, 46, "Input"],
+Cell[9753, 309, 564, 11, 110, "Input"],
+Cell[10320, 322, 129, 1, 28, "Text"],
+Cell[10452, 325, 209, 3, 27, "Input"],
+Cell[10664, 330, 94, 1, 27, "Input"],
+Cell[10761, 333, 113, 4, 47, "Text"],
+Cell[10877, 339, 94, 1, 27, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)
+
