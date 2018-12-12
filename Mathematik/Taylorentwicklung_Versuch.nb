@@ -10,25 +10,14 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      7671,        200]
-NotebookOptionsPosition[      7159,        179]
-NotebookOutlinePosition[      7508,        194]
-CellTagsIndexPosition[      7465,        191]
+NotebookDataLength[      4528,        128]
+NotebookOptionsPosition[      4206,        113]
+NotebookOutlinePosition[      4554,        128]
+CellTagsIndexPosition[      4511,        125]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
-Cell[BoxData[
- RowBox[{" ", 
-  RowBox[{
-   RowBox[{"f", "[", "x_", "]"}], ":=", 
-   FractionBox["1", 
-    RowBox[{"x", "+", "1"}]]}]}]], "Input",
- CellChangeTimes->{
-  3.753604439575569*^9, {3.753605389341503*^9, 3.7536054555397396`*^9}, {
-   3.7536380955646553`*^9, 3.753638096015647*^9}, {3.7536393982669415`*^9, 
-   3.753639402038898*^9}, {3.7536394444054537`*^9, 3.7536394474163632`*^9}}],
-
 Cell[BoxData[
  RowBox[{
   RowBox[{
@@ -75,13 +64,21 @@ Cell[BoxData[
    3.753639519826521*^9, 3.753639578125847*^9}, {3.7536396438881583`*^9, 
    3.7536397698456593`*^9}, 3.753639979847185*^9}],
 
-Cell[CellGroupData[{
+Cell["\<\
+Hier Funktion (f[x]), Entwicklungspunkt, und Ordnung, bis zu der entwickelt \
+werden soll,ersetzen:\
+\>", "Text",
+ CellChangeTimes->{{3.753641520370154*^9, 3.7536415409788866`*^9}, {
+  3.753641571830557*^9, 3.753641613254077*^9}}],
 
 Cell[BoxData[{
  RowBox[{
+  RowBox[{"f", "[", "x_", "]"}], ":=", 
+  RowBox[{"Sin", "[", "x", "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
   RowBox[{"Entwicklungspunkt", "=", "0"}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
-  RowBox[{"ordnung", "=", "5"}], ";"}], "\[IndentingNewLine]", 
+  RowBox[{"ordnung", "=", "20"}], ";"}], "\[IndentingNewLine]", 
  RowBox[{"Taylor", "[", 
   RowBox[{"f", ",", "x", ",", "ordnung", ",", "Entwicklungspunkt"}], 
   "]"}], "\[IndentingNewLine]", 
@@ -110,75 +107,12 @@ Cell[BoxData[{
   3.753638867384514*^9, 3.7536389063000607`*^9}, {3.7536394224676623`*^9, 
   3.753639434856509*^9}, {3.753639780069623*^9, 3.753639801172268*^9}, {
   3.753639884604297*^9, 3.7536398904702516`*^9}, {3.7536399275238285`*^9, 
-  3.7536400203747425`*^9}, {3.7536400531973605`*^9, 3.7536401840688353`*^9}}],
-
-Cell[BoxData[
- RowBox[{"1", "-", "x", "+", 
-  SuperscriptBox["x", "2"], "-", 
-  SuperscriptBox["x", "3"], "+", 
-  SuperscriptBox["x", "4"], "-", 
-  SuperscriptBox["x", "5"]}]], "Output",
- CellChangeTimes->{{3.753638785716464*^9, 3.753638800346289*^9}, {
-   3.753638868256502*^9, 3.75363890735504*^9}, {3.7536394071228385`*^9, 
-   3.7536394247656302`*^9}, 3.7536394551702805`*^9, 3.7536399972780094`*^9, {
-   3.7536401085187173`*^9, 3.753640184946827*^9}}],
-
-Cell[BoxData[
- TagBox[
-  StyleBox[
-   DynamicModuleBox[{$CellContext`o$$ = 0, Typeset`show$$ = True, 
-    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
-    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
-    "\"untitled\"", Typeset`specs$$ = {{
-      Hold[$CellContext`o$$], 0, 5, 1}}, Typeset`size$$ = {
-    360., {115., 120.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
-    Typeset`skipInitDone$$ = True, $CellContext`o$3162542$$ = 0}, 
-    DynamicBox[Manipulate`ManipulateBoxes[
-     1, StandardForm, "Variables" :> {$CellContext`o$$ = 0}, 
-      "ControllerVariables" :> {
-        Hold[$CellContext`o$$, $CellContext`o$3162542$$, 0]}, 
-      "OtherVariables" :> {
-       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
-        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
-        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
-         Typeset`skipInitDone$$}, "Body" :> Plot[{
-         $CellContext`f[$CellContext`x], 
-         $CellContext`Taylor[$CellContext`f, $CellContext`x, $CellContext`o$$,
-           0]}, {$CellContext`x, (-4) Pi, 4 Pi}, PlotRange -> {-2, 2}], 
-      "Specifications" :> {{$CellContext`o$$, 0, 5, 1, 
-         AppearanceElements -> {
-          "ProgressSlider", "PlayPauseButton", "FasterSlowerButtons", 
-           "DirectionButton"}}}, 
-      "Options" :> {
-       ControlType -> Animator, AppearanceElements -> None, DefaultBaseStyle -> 
-        "Animate", DefaultLabelStyle -> "AnimateLabel", SynchronousUpdating -> 
-        True, ShrinkingDelay -> 10.}, "DefaultOptions" :> {}],
-     ImageSizeCache->{411., {154., 160.}},
-     SingleEvaluation->True],
-    Deinitialization:>None,
-    DynamicModuleValues:>{},
-    SynchronousInitialization->True,
-    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
-    UnsavedVariables:>{Typeset`initDone$$},
-    UntrackedVariables:>{Typeset`size$$}], "Animate",
-   Deployed->True,
-   StripOnInput->False],
-  Manipulate`InterpretManipulate[1]]], "Output",
- CellChangeTimes->{{3.753638785716464*^9, 3.753638800346289*^9}, {
-   3.753638868256502*^9, 3.75363890735504*^9}, {3.7536394071228385`*^9, 
-   3.7536394247656302`*^9}, 3.7536394551702805`*^9, 3.7536399972780094`*^9, {
-   3.7536401085187173`*^9, 3.7536401850888205`*^9}}]
-}, Open  ]],
-
-Cell[BoxData[" "], "Input",
- CellChangeTimes->{{3.753638955162485*^9, 3.7536389603534226`*^9}, {
-  3.7536393773431897`*^9, 3.7536393902240353`*^9}}],
-
-Cell[BoxData[" "], "Input",
- CellChangeTimes->{3.753638790473403*^9}]
+  3.7536400203747425`*^9}, {3.7536400531973605`*^9, 3.7536401840688353`*^9}, {
+  3.753640683255785*^9, 3.7536406926576767`*^9}, {3.753641563078636*^9, 
+  3.753641564754634*^9}}]
 },
-WindowSize->{681, 716},
-WindowMargins->{{Automatic, 277}, {Automatic, 182}},
+WindowSize->{1366, 725},
+WindowMargins->{{-8, Automatic}, {Automatic, -8}},
 FrontEndVersion->"11.0 for Microsoft Windows (64-bit) (September 21, 2016)",
 StyleDefinitions->"Default.nb"
 ]
@@ -193,15 +127,9 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 392, 9, 49, "Input"],
-Cell[953, 31, 1868, 44, 166, "Input"],
-Cell[CellGroupData[{
-Cell[2846, 79, 1319, 33, 107, "Input"],
-Cell[4168, 114, 455, 9, 30, "Output"],
-Cell[4626, 125, 2294, 44, 364, "Output"]
-}, Open  ]],
-Cell[6935, 172, 148, 2, 30, "Input"],
-Cell[7086, 176, 69, 1, 30, "Input"]
+Cell[558, 20, 1868, 44, 166, "Input"],
+Cell[2429, 66, 240, 5, 30, "Text"],
+Cell[2672, 73, 1530, 38, 107, "Input"]
 }
 ]
 *)
