@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      6866,        192]
-NotebookOptionsPosition[      6326,        169]
-NotebookOutlinePosition[      6674,        184]
-CellTagsIndexPosition[      6631,        181]
+NotebookDataLength[      7017,        197]
+NotebookOptionsPosition[      6441,        173]
+NotebookOutlinePosition[      6787,        188]
+CellTagsIndexPosition[      6744,        185]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -122,13 +122,13 @@ Cell[BoxData[
 Cell[BoxData[
  TagBox[
   StyleBox[
-   DynamicModuleBox[{$CellContext`o$$ = 9, Typeset`show$$ = True, 
+   DynamicModuleBox[{$CellContext`o$$ = 2, Typeset`show$$ = True, 
     Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
     Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
     "\"untitled\"", Typeset`specs$$ = {{
-      Hold[$CellContext`o$$], 0, 20, 1}}, Typeset`size$$ = {
-    360., {115., 120.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
-    Typeset`skipInitDone$$ = True, $CellContext`o$3024729$$ = 0}, 
+      Hold[$CellContext`o$$], 0, 20, 1}}, Typeset`size$$ = {285., {92., 97.}},
+     Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    True, $CellContext`o$3024729$$ = 0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, "Variables" :> {$CellContext`o$$ = 0}, 
       "ControllerVariables" :> {
@@ -149,7 +149,7 @@ Cell[BoxData[
        ControlType -> Animator, AppearanceElements -> None, DefaultBaseStyle -> 
         "Animate", DefaultLabelStyle -> "AnimateLabel", SynchronousUpdating -> 
         True, ShrinkingDelay -> 10.}, "DefaultOptions" :> {}],
-     ImageSizeCache->{411., {154., 160.}},
+     ImageSizeCache->{336., {131., 137.}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
@@ -164,11 +164,15 @@ Cell[BoxData[
   3.753638868256502*^9, 3.75363890735504*^9}}]
 }, Open  ]],
 
+Cell[BoxData[
+ RowBox[{" ", "514"}]], "Input",
+ CellChangeTimes->{{3.753638955162485*^9, 3.7536389603534226`*^9}}],
+
 Cell[BoxData[" "], "Input",
  CellChangeTimes->{3.753638790473403*^9}]
 },
-WindowSize->{1366, 725},
-WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+WindowSize->{404, 697},
+WindowMargins->{{-7, Automatic}, {Automatic, 0}},
 FrontEndVersion->"11.0 for Microsoft Windows (64-bit) (September 21, 2016)",
 StyleDefinitions->"Default.nb"
 ]
@@ -184,16 +188,17 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[558, 20, 274, 7, 30, "Input"],
-Cell[835, 29, 1734, 42, 166, "Input"],
+Cell[835, 29, 1734, 42, 204, "Input"],
 Cell[CellGroupData[{
 Cell[2594, 75, 468, 9, 30, "Input"],
 Cell[3065, 86, 222, 6, 48, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[3324, 97, 772, 22, 30, "Input"],
-Cell[4099, 121, 2139, 42, 364, "Output"]
+Cell[3324, 97, 772, 22, 69, "Input"],
+Cell[4099, 121, 2137, 42, 285, "Output"]
 }, Open  ]],
-Cell[6253, 166, 69, 1, 30, "Input"]
+Cell[6251, 166, 114, 2, 30, "Input"],
+Cell[6368, 170, 69, 1, 30, "Input"]
 }
 ]
 *)
