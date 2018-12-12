@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      7668,        200]
+NotebookDataLength[      7671,        200]
 NotebookOptionsPosition[      7159,        179]
-NotebookOutlinePosition[      7505,        194]
-CellTagsIndexPosition[      7462,        191]
+NotebookOutlinePosition[      7508,        194]
+CellTagsIndexPosition[      7465,        191]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -126,7 +126,7 @@ Cell[BoxData[
 Cell[BoxData[
  TagBox[
   StyleBox[
-   DynamicModuleBox[{$CellContext`o$$ = 2, Typeset`show$$ = True, 
+   DynamicModuleBox[{$CellContext`o$$ = 0, Typeset`show$$ = True, 
     Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
     Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
     "\"untitled\"", Typeset`specs$$ = {{
@@ -178,7 +178,7 @@ Cell[BoxData[" "], "Input",
  CellChangeTimes->{3.753638790473403*^9}]
 },
 WindowSize->{681, 716},
-WindowMargins->{{-7, Automatic}, {Automatic, 0}},
+WindowMargins->{{Automatic, 277}, {Automatic, 182}},
 FrontEndVersion->"11.0 for Microsoft Windows (64-bit) (September 21, 2016)",
 StyleDefinitions->"Default.nb"
 ]
