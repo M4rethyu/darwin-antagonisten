@@ -1,0 +1,291 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     10135,        283]
+NotebookOptionsPosition[      9279,        250]
+NotebookOutlinePosition[      9625,        265]
+CellTagsIndexPosition[      9582,        262]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"Messreihe", "[", 
+    RowBox[{"arr_", ",", 
+     RowBox[{"output_:", "False"}]}], "]"}], ":=", 
+   RowBox[{"With", "[", 
+    RowBox[{
+     RowBox[{"{", "\[IndentingNewLine]", 
+      RowBox[{"n", "=", 
+       RowBox[{"Length", "[", "arr", "]"}]}], "\[IndentingNewLine]", "}"}], 
+     ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"erwartungswert", "=", 
+       RowBox[{"Sum", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"arr", "[", 
+           RowBox[{"[", "i", "]"}], "]"}], "/", "n"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"i", ",", "1", ",", "n"}], "}"}]}], "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"standardabweichung", "=", 
+       RowBox[{
+        SqrtBox[
+         FractionBox["1", 
+          RowBox[{"n", "-", "1"}]]], "*", 
+        RowBox[{"Sum", "[", 
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"arr", "[", 
+              RowBox[{"[", "i", "]"}], "]"}], "-", "erwartungswert"}], ")"}], 
+           "2"], ",", 
+          RowBox[{"{", 
+           RowBox[{"i", ",", "1", ",", "n"}], "}"}]}], "]"}]}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"standardfehler", "=", 
+       FractionBox["standardabweichung", 
+        SqrtBox["n"]]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{"output", "\[Equal]", "True"}], ",", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"Print", "[", 
+          RowBox[{"\"\<Erwartungswert: \>\"", ",", "erwartungswert"}], "]"}], 
+         ";", "\[IndentingNewLine]", 
+         RowBox[{"Print", "[", 
+          RowBox[{"\"\<Standardabweichung: \>\"", ",", "standardabweichung"}],
+           "]"}], ";", "\[IndentingNewLine]", 
+         RowBox[{"Print", "[", 
+          RowBox[{"\"\<Standardfehler: \>\"", ",", "standardfehler"}], "]"}], 
+         ";", "\[IndentingNewLine]", 
+         RowBox[{"Print", "[", 
+          RowBox[{
+          "\"\<=> \>\"", ",", "erwartungswert", ",", "\"\<\[PlusMinus]\>\"", 
+           ",", "standardfehler"}], "]"}], ";"}]}], "\[IndentingNewLine]", 
+       "]"}], ";", "\[IndentingNewLine]", 
+      RowBox[{"Return", "[", 
+       RowBox[{"StringJoin", "[", 
+        RowBox[{
+         RowBox[{"ToString", "[", "erwartungswert", "]"}], ",", 
+         "\"\<\[PlusMinus]\>\"", ",", 
+         RowBox[{"ToString", "[", "standardfehler", "]"}]}], "]"}], "]"}], 
+      ";"}]}], "\[IndentingNewLine]", "]"}]}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"ClearAll", "[", "Calc", "]"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Calc", "[", "expr_", "]"}], ":=", 
+  RowBox[{"(", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"values", "=", 
+     RowBox[{"StringCases", "[", 
+      RowBox[{
+       RowBox[{"ToString", "[", 
+        RowBox[{"Evaluate", "[", "expr", "]"}], "]"}], ",", 
+       RowBox[{
+       "NumberString", "~~", "\"\<\[PlusMinus]\>\"", "~~", "NumberString"}]}],
+       "]"}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{"rules", "=", 
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"ToString", "[", 
+         RowBox[{"values", "[", 
+          RowBox[{"[", "i", "]"}], "]"}], "]"}], "\[Rule]", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"ToExpression", "[", 
+           RowBox[{"values", "[", 
+            RowBox[{"[", "i", "]"}], "]"}], "]"}], "/.", 
+          RowBox[{
+           RowBox[{"x_", "\[PlusMinus]", "y_"}], "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{"x", ",", "y"}], "}"}]}]}], ")"}]}], ",", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", "1", ",", 
+         RowBox[{"Length", "[", "values", "]"}]}], "}"}]}], "]"}]}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"result", "=", 
+     RowBox[{
+      RowBox[{"Evaluate", "[", 
+       RowBox[{"(", 
+        RowBox[{"expr", "/.", "rules"}], ")"}], "]"}], "/.", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"x_", ",", "y_"}], "}"}], "\[Rule]", 
+       RowBox[{"x", "\[PlusMinus]", "y"}]}]}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{"Return", "[", "result", "]"}], ";"}], "\[IndentingNewLine]", 
+   ")"}]}]}], "Input",
+ CellChangeTimes->{
+  3.7528185101736794`*^9, {3.752818590639988*^9, 3.752818664069853*^9}, {
+   3.7528187047840843`*^9, 3.752818855032506*^9}, {3.7528189062977896`*^9, 
+   3.7528189067899866`*^9}, {3.752819026655345*^9, 3.75281908697299*^9}, {
+   3.752819188177742*^9, 3.752819199460275*^9}, {3.7528192398454647`*^9, 
+   3.752819264373329*^9}, {3.752819391491632*^9, 3.7528193925704327`*^9}, {
+   3.7528194228247085`*^9, 3.752819551082797*^9}, {3.752819750856228*^9, 
+   3.7528197808417835`*^9}, {3.7528198324105062`*^9, 3.752819851184087*^9}, {
+   3.753874795417733*^9, 3.7538748055692406`*^9}, {3.753874883726836*^9, 
+   3.7538752074385424`*^9}, {3.7538752481254244`*^9, 
+   3.7538754398900223`*^9}, {3.7538754810636234`*^9, 3.753875486791051*^9}, {
+   3.753875641675191*^9, 3.7538757002427425`*^9}, {3.7538758559379654`*^9, 
+   3.7538759145851097`*^9}, 3.7538958256359487`*^9, {3.753895867239442*^9, 
+   3.753895886192732*^9}, {3.7538981477194967`*^9, 3.7538981570828514`*^9}, {
+   3.7538982135621004`*^9, 3.753898214385895*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"werte", "=", 
+   RowBox[{"{", 
+    RowBox[{
+    "1.234", ",", "1.249", ",", "1.243", ",", "1.238", ",", "1.255", ",", 
+     "1.252", ",", "1.246", ",", "1.235", ",", "1.262"}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Messreihe", "[", 
+  RowBox[{"werte", ",", "True"}], "]"}]}], "Input",
+ CellChangeTimes->{{3.752819212254872*^9, 3.7528192201752105`*^9}, {
+  3.7528192719011345`*^9, 3.752819272783477*^9}, {3.7538747743810587`*^9, 
+  3.7538747749609675`*^9}, {3.7538754912461176`*^9, 3.7538755027733407`*^9}, {
+  3.7538755642068763`*^9, 3.7538755644881105`*^9}, {3.753875686147152*^9, 
+  3.7538756906881666`*^9}, {3.7538757417512827`*^9, 3.753875751225024*^9}, {
+  3.753875869073089*^9, 3.7538759028563395`*^9}, {3.753895841128301*^9, 
+  3.7538958413137913`*^9}, {3.753895872700574*^9, 3.7538958776356306`*^9}, {
+  3.7538959353928323`*^9, 3.753895935798608*^9}, {3.7538959695621777`*^9, 
+  3.7538959696792803`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Erwartungswert: \"\>", "\[InvisibleSpace]", "1.246`"}],
+  SequenceForm["Erwartungswert: ", 1.246],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.753898130458538*^9, 3.7538981606403723`*^9, {3.7538981936451283`*^9, 
+   3.7538982159509163`*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Standardabweichung: \"\>", "\[InvisibleSpace]", 
+   "0.000254558441227156`"}],
+  SequenceForm["Standardabweichung: ", 0.000254558441227156],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.753898130458538*^9, 3.7538981606403723`*^9, {3.7538981936451283`*^9, 
+   3.753898215953884*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Standardfehler: \"\>", "\[InvisibleSpace]", 
+   "0.00008485281374238533`"}],
+  SequenceForm["Standardfehler: ", 0.00008485281374238533],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.753898130458538*^9, 3.7538981606403723`*^9, {3.7538981936451283`*^9, 
+   3.7538982159578094`*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"=> \"\>", "\[InvisibleSpace]", "1.246`", 
+   "\[InvisibleSpace]", "\<\"\[PlusMinus]\"\>", "\[InvisibleSpace]", 
+   "0.00008485281374238533`"}],
+  SequenceForm["=> ", 1.246, "\[PlusMinus]", 0.00008485281374238533],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.753898130458538*^9, 3.7538981606403723`*^9, {3.7538981936451283`*^9, 
+   3.7538982159633117`*^9}}]
+}, Open  ]],
+
+Cell[BoxData["\<\"1.246\[PlusMinus]0.0000848528\"\>"], "Output",
+ CellChangeTimes->{
+  3.753898130478871*^9, 3.753898160655751*^9, {3.753898193664029*^9, 
+   3.7538982159667835`*^9}}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"Messreihe", "[", "werte", "]"}]], "Input",
+ CellChangeTimes->{{3.7538981685025578`*^9, 3.753898221169367*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\"\<1.246\[PlusMinus]0.0000848528\>\"", "/", "2"}]], "Input",
+ CellChangeTimes->{{3.753898225462165*^9, 3.7538982266287556`*^9}}],
+
+Cell[BoxData[
+ FractionBox["\<\"1.246\[PlusMinus]0.0000848528\"\>", "2"]], "Output",
+ CellChangeTimes->{3.7538982286659546`*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"Messreihe", "[", "werte", "]"}]], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"\"\<1.246\[PlusMinus]0.0000848528\>\"", "/", "2"}], "//", "Calc"}]],\
+ "Input",
+ CellChangeTimes->{{3.753898241587948*^9, 3.7538982448064303`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"0.623`", "\[PlusMinus]", "0.0000424264`"}]], "Output",
+ CellChangeTimes->{3.753898245298506*^9}]
+}, Open  ]]
+},
+WindowSize->{670, 628},
+WindowMargins->{{Automatic, -7}, {Automatic, 0}},
+FrontEndVersion->"11.0 for Microsoft Windows (64-bit) (September 21, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 5223, 126, 570, "Input"],
+Cell[CellGroupData[{
+Cell[5806, 150, 963, 18, 50, "Input"],
+Cell[CellGroupData[{
+Cell[6794, 172, 300, 7, 22, "Print"],
+Cell[7097, 181, 340, 8, 22, "Print"],
+Cell[7440, 191, 338, 8, 22, "Print"],
+Cell[7781, 201, 415, 9, 22, "Print"]
+}, Open  ]],
+Cell[8211, 213, 183, 3, 30, "Output"]
+}, Open  ]],
+Cell[8409, 219, 134, 2, 30, "Input"],
+Cell[CellGroupData[{
+Cell[8568, 225, 153, 2, 30, InheritFromParent],
+Cell[8724, 229, 128, 2, 45, "Output"]
+}, Open  ]],
+Cell[8867, 234, 66, 1, 30, "Input"],
+Cell[CellGroupData[{
+Cell[8958, 239, 182, 4, 30, InheritFromParent],
+Cell[9143, 245, 120, 2, 63, "Output"]
+}, Open  ]]
+}
+]
+*)
+
