@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     15616,        362]
-NotebookOptionsPosition[     15299,        347]
-NotebookOutlinePosition[     15676,        363]
-CellTagsIndexPosition[     15633,        360]
+NotebookDataLength[     18364,        415]
+NotebookOptionsPosition[     18047,        400]
+NotebookOutlinePosition[     18424,        416]
+CellTagsIndexPosition[     18381,        413]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -32,8 +32,9 @@ Cell[BoxData[{
         RowBox[{"0", ",", "0"}], "}"}]}], ",", 
       RowBox[{"x0", "=", "0"}], ",", 
       RowBox[{"n", "=", "10"}], ",", 
-      RowBox[{"expr", "=", "x"}], ",", "f", ",", "table"}], "}"}], ",", 
-    "\[IndentingNewLine]", 
+      RowBox[{"expr", "=", "x"}], ",", "f", ",", 
+      RowBox[{"table", "=", "Null"}], ",", 
+      RowBox[{"error", "=", "\"\<\>\""}]}], "}"}], ",", "\[IndentingNewLine]", 
     RowBox[{
      RowBox[{
       RowBox[{"f", "[", "val_", "]"}], ":=", 
@@ -128,12 +129,21 @@ set \!\(\*SubscriptBox[\(x\), \(0\)]\))\>\"", "}"}], "]"}], ",",
                     RowBox[{"ToString", "[", 
                     RowBox[{
                     "TraditionalForm", "[", 
-                    "\"\<|\!\(\*FractionBox[\(f[\*SubscriptBox[\(x\), \
-\(0\)]]*\(f''\)[\*SubscriptBox[\(x\), \(0\)]]\), \
-SuperscriptBox[\(\(f'\)[\*SubscriptBox[\(x\), \(0\)]]\), \(2\)]]\)| = \>\"", 
-                    "]"}], "]"}], ",", 
+                    "\"\<|\!\(\*FractionBox[\(f \((\*SubscriptBox[\(x\), \
+\(0\)])\)*f'' \((\*SubscriptBox[\(x\), \(0\)])\)\), \(f' \*SuperscriptBox[\((\
+\*SubscriptBox[\(x\), \(0\)])\), \(2\)]\)]\)| = \>\"", "]"}], "]"}], ",", 
                     RowBox[{"FontSize", "\[Rule]", "18"}]}], "]"}], ",", 
+                    "\[IndentingNewLine]", 
                     RowBox[{"Dynamic", "[", 
+                    RowBox[{"If", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"f", "'"}], "[", "x0", "]"}], "\[Equal]", "0"}], 
+                    ",", 
+                    RowBox[{"Style", "[", 
+                    RowBox[{"\"\<\[Infinity]\>\"", ",", 
+                    RowBox[{"FontSize", "\[Rule]", "20"}]}], "]"}], ",", 
                     RowBox[{"Style", "[", 
                     RowBox[{
                     RowBox[{"ToString", "[", 
@@ -148,20 +158,41 @@ SuperscriptBox[\(\(f'\)[\*SubscriptBox[\(x\), \(0\)]]\), \(2\)]]\)| = \>\"",
                     RowBox[{
                     RowBox[{"f", "'"}], "[", "x0", "]"}], "2"]], "]"}], "]"}],
                      "]"}], ",", 
-                    RowBox[{"FontSize", "\[Rule]", "15"}]}], "]"}], "]"}]}], 
-                    "}"}], "]"}]}], "\[IndentingNewLine]", "}"}], "]"}], ",", 
+                    RowBox[{"FontSize", "\[Rule]", "15"}]}], "]"}]}], "]"}], 
+                    "]"}]}], "}"}], "]"}]}], "\[IndentingNewLine]", "}"}], 
+                   "]"}], ",", 
                   RowBox[{"ImageSize", "\[Rule]", 
                    RowBox[{"{", 
                     RowBox[{"255", ",", "Full"}], "}"}]}]}], "]"}], ",", 
                 "\[IndentingNewLine]", "\[IndentingNewLine]", 
                 RowBox[{"Button", "[", 
                  RowBox[{"\"\<Run Newton\\n Algorithm\>\"", ",", 
-                  RowBox[{"(", 
-                   RowBox[{"table", "=", 
+                  RowBox[{"(", "\[IndentingNewLine]", 
+                   RowBox[{
+                    RowBox[{"error", "=", "\"\<\>\""}], ";", 
+                    "\[IndentingNewLine]", 
+                    RowBox[{"If", "[", 
+                    RowBox[{
+                    RowBox[{"Not", "[", 
+                    RowBox[{"NumberQ", "[", "x0", "]"}], "]"}], ",", 
+                    "\[IndentingNewLine]", 
+                    RowBox[{"error", "=", 
+                    RowBox[{"StringJoin", "[", 
+                    RowBox[{
+                    "error", ",", 
+                    "\"\<Error: Please set x0 to a value.\\n\>\""}], 
+                    "]"}]}]}], "\[IndentingNewLine]", "]"}], ";", 
+                    "\[IndentingNewLine]", "\[IndentingNewLine]", 
+                    RowBox[{"If", "[", 
+                    RowBox[{
+                    RowBox[{"error", "\[Equal]", "\"\<\>\""}], ",", 
+                    "\[IndentingNewLine]", 
+                    RowBox[{"table", "=", 
                     RowBox[{"NewtonAlgorithm", "[", 
-                    RowBox[{"f", ",", "x0", ",", "n"}], "]"}]}], ")"}]}], 
-                 "]"}]}], "\[IndentingNewLine]", "}"}], "]"}], ",", 
-             "\[IndentingNewLine]", "\[IndentingNewLine]", 
+                    RowBox[{"f", ",", "x0", ",", "n"}], "]"}]}]}], 
+                    "\[IndentingNewLine]", "]"}]}], "\[IndentingNewLine]", 
+                   ")"}]}], "]"}]}], "\[IndentingNewLine]", "}"}], "]"}], ",",
+              "\[IndentingNewLine]", "\[IndentingNewLine]", 
              RowBox[{"Framed", "[", 
               RowBox[{"Column", "[", 
                RowBox[{"{", "\[IndentingNewLine]", 
@@ -271,16 +302,30 @@ SuperscriptBox[\(\(f'\)[\*SubscriptBox[\(x\), \(0\)]]\), \(2\)]]\)| = \>\"",
                    "\[IndentingNewLine]", "}"}], "]"}]}], 
                 "\[IndentingNewLine]", "}"}], "]"}], "]"}]}], 
             "\[IndentingNewLine]", "}"}], "]"}], ",", "\[IndentingNewLine]", 
-          RowBox[{"Framed", "[", 
-           RowBox[{
-            RowBox[{"Row", "[", 
-             RowBox[{"{", "\[IndentingNewLine]", 
-              RowBox[{"Dynamic", "[", "table", "]"}], "\[IndentingNewLine]", 
-              "}"}], "]"}], ",", 
-            RowBox[{"ImageSize", "\[Rule]", "Automatic"}]}], "]"}]}], 
-         "\[IndentingNewLine]", "}"}], "]"}], ",", "\"\<Newton Algorithm\>\"",
-        ",", "Top"}], "]"}]}]}], "\[IndentingNewLine]", 
-   "]"}]}], "\[IndentingNewLine]", 
+          RowBox[{"Row", "[", 
+           RowBox[{"{", "\[IndentingNewLine]", 
+            RowBox[{
+             RowBox[{"Framed", "[", 
+              RowBox[{
+               RowBox[{"Dynamic", "[", "table", "]"}], ",", 
+               RowBox[{"ImageSize", "\[Rule]", "Automatic"}]}], "]"}], ",", 
+             "\[IndentingNewLine]", 
+             RowBox[{"Dynamic", "[", 
+              RowBox[{"If", "[", 
+               RowBox[{
+                RowBox[{"Not", "[", 
+                 RowBox[{"error", "\[Equal]", "\"\<\>\""}], "]"}], ",", 
+                RowBox[{"Framed", "[", 
+                 RowBox[{"Style", "[", 
+                  RowBox[{
+                   RowBox[{"StringTrim", "[", 
+                    RowBox[{"error", ",", "\"\<\\n\>\""}], "]"}], ",", 
+                   RowBox[{"RGBColor", "[", 
+                    RowBox[{"1", ",", "0.21", ",", "0.18"}], "]"}]}], "]"}], 
+                 "]"}]}], "]"}], "]"}]}], "\[IndentingNewLine]", "}"}], 
+           "]"}]}], "\[IndentingNewLine]", "}"}], "]"}], ",", 
+       "\"\<Newton Algorithm\>\"", ",", "Top"}], "]"}]}]}], 
+   "\[IndentingNewLine]", "]"}]}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"NewtonAlgorithm", "[", 
    RowBox[{"func_", ",", "x0_", ",", "n_"}], "]"}], ":=", 
@@ -340,7 +385,15 @@ SuperscriptBox[\(\(f'\)[\*SubscriptBox[\(x\), \(0\)]]\), \(2\)]]\)| = \>\"",
             "\"\<f'(\!\(\*SubscriptBox[\(x\), \(k\)]\))\>\"", ",", 
             "\"\<\!\(\*SubscriptBox[\(x\), \(k + 1\)]\)\>\""}], "}"}]}], 
          "}"}]}]}], "]"}]}]}], "\[IndentingNewLine]", "]"}]}]}], "Input",
- CellChangeTimes->{{3.759929851250286*^9, 3.759929856248378*^9}}],
+ CellChangeTimes->{{3.759929851250286*^9, 3.759929856248378*^9}, {
+  3.759942848625779*^9, 3.759942865877883*^9}, {3.759942921928297*^9, 
+  3.759943026440359*^9}, {3.7599430688907857`*^9, 3.7599431501023903`*^9}, {
+  3.7599431980225887`*^9, 3.7599432481012115`*^9}, {3.7599432875187263`*^9, 
+  3.759943294996046*^9}, {3.7599434080054955`*^9, 3.7599434860837193`*^9}, {
+  3.759943555399249*^9, 3.759943754459231*^9}, {3.7599437874648857`*^9, 
+  3.7599438088415365`*^9}, {3.759943869679018*^9, 3.7599439332959895`*^9}, {
+  3.759943968237605*^9, 3.759943969650566*^9}, {3.7599440317086077`*^9, 
+  3.759944044661023*^9}}],
 
 Cell[BoxData["Newton"], "Input",
  CellChangeTimes->{{3.7599298668938255`*^9, 3.7599298683826637`*^9}}]
@@ -362,8 +415,8 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 14632, 322, 1211, "Input"],
-Cell[15193, 344, 102, 1, 27, "Input"]
+Cell[558, 20, 17380, 375, 1406, "Input"],
+Cell[17941, 397, 102, 1, 27, "Input"]
 }
 ]
 *)
