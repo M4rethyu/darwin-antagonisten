@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     12220,        299]
-NotebookOptionsPosition[     11862,        282]
-NotebookOutlinePosition[     12208,        297]
-CellTagsIndexPosition[     12165,        294]
+NotebookDataLength[     12341,        300]
+NotebookOptionsPosition[     11983,        283]
+NotebookOutlinePosition[     12329,        298]
+CellTagsIndexPosition[     12286,        295]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -45,19 +45,19 @@ Cell[BoxData[
           RowBox[{"i", ",", "1", ",", "n"}], "}"}]}], "]"}], "/", "n"}]}], 
      ";", "\[IndentingNewLine]", 
      RowBox[{"\[Sigma]x", ":=", 
-      RowBox[{
-       SqrtBox[
+      SqrtBox[
+       RowBox[{
         FractionBox["1", 
-         RowBox[{"n", "-", "1"}]]], "*", 
-       RowBox[{"Sum", "[", 
-        RowBox[{
-         SuperscriptBox[
-          RowBox[{"(", 
-           RowBox[{
-            RowBox[{"values", "[", 
-             RowBox[{"[", "i", "]"}], "]"}], "-", "x"}], ")"}], "2"], ",", 
-         RowBox[{"{", 
-          RowBox[{"i", ",", "1", ",", "n"}], "}"}]}], "]"}]}]}], ";", 
+         RowBox[{"n", "-", "1"}]], "*", 
+        RowBox[{"Sum", "[", 
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"values", "[", 
+              RowBox[{"[", "i", "]"}], "]"}], "-", "x"}], ")"}], "2"], ",", 
+          RowBox[{"{", 
+           RowBox[{"i", ",", "1", ",", "n"}], "}"}]}], "]"}]}]]}], ";", 
      "\[IndentingNewLine]", 
      RowBox[{"sx", ":=", 
       FractionBox["\[Sigma]x", 
@@ -179,7 +179,7 @@ OverscriptBox[\(x\), \(_\)]]\) = \>\"", ",", " ", "\[CapitalDelta]sx"}],
    3.7600259999309363`*^9, 3.760026155198557*^9}, {3.760026225297271*^9, 
    3.760026248405732*^9}, {3.7600263275328817`*^9, 3.760026334901663*^9}, {
    3.76002647424249*^9, 3.76002647466591*^9}, {3.760026538301323*^9, 
-   3.7600265391412244`*^9}}],
+   3.7600265391412244`*^9}, {3.761307279878172*^9, 3.7613072851405687`*^9}}],
 
 Cell[CellGroupData[{
 
@@ -210,19 +210,19 @@ Cell[BoxData[
             
             TemplateBox[{
              "\"\\!\\(\\*SubscriptBox[\\(s\\), \\(x\\)]\\) = \"",
-              "0.000254558441227156`"},
+              "0.009486832980505117`"},
              "RowDefault"]},
            {
             
             TemplateBox[{
              "\"\\!\\(\\*SubscriptBox[\\(s\\), OverscriptBox[\\(x\\), \
-\\(_\\)]]\\) =   \"","0.00008485281374238533`"},
+\\(_\\)]]\\) =   \"","0.003162277660168372`"},
              "RowDefault"]},
            {
             
             TemplateBox[{
              "\"\\!\\(\\*SubscriptBox[\\(\[CapitalDelta]s\\), \
-OverscriptBox[\\(x\\), \\(_\\)]]\\) = \"","0.000021213203435596333`"},
+OverscriptBox[\\(x\\), \\(_\\)]]\\) = \"","0.000790569415042093`"},
              "RowDefault"]},
            {
             TemplateBox[{TagBox[
@@ -238,20 +238,20 @@ OverscriptBox[\\(x\\), \\(_\\)]]\\) = \"","0.000021213203435596333`"},
                   TemplateBox[{
                     TagBox[
                     InterpretationBox[
-                    "\"1.24600\"", 1.246, AutoDelete -> True], NumberForm[#, {
-                    DirectedInfinity[1], 5}]& ], "\"\[PlusMinus]\""}, 
+                    "\"1.2460\"", 1.246, AutoDelete -> True], NumberForm[#, {
+                    DirectedInfinity[1], 4}]& ], "\"\[PlusMinus]\""}, 
                    "RowDefault"]}}, 
                 GridBoxAlignment -> {"Columns" -> {{Right}}}, 
                 DefaultBaseStyle -> "Column", 
                 GridBoxItemSize -> {
                  "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
                "Column"],TagBox[
-               GridBox[{{"0.00008485281374238533`"}, {
+               GridBox[{{"0.003162277660168372`"}, {
                   TagBox[
                    InterpretationBox[
-                   "\"0.00008\"", 0.00008485281374238533, AutoDelete -> True],
-                    NumberForm[#, {
-                    DirectedInfinity[1], 5}]& ]}}, 
+                   "\"0.0032\"", 0.003162277660168372, AutoDelete -> True], 
+                   NumberForm[#, {
+                    DirectedInfinity[1], 4}]& ]}}, 
                 GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
                 "Column", 
                 GridBoxItemSize -> {
@@ -277,7 +277,8 @@ OverscriptBox[\\(x\\), \\(_\\)]]\\) = \"","0.000021213203435596333`"},
   3.7600254228600044`*^9, 3.760025626519577*^9, 3.760025955274034*^9, 
   3.760026010439258*^9, 3.7600260917033052`*^9, 3.7600262568311152`*^9, 
   3.7600263366751623`*^9, 3.7600264771713014`*^9, 3.760026540522642*^9, 
-  3.7600269481963367`*^9}]
+  3.7600269481963367`*^9, 3.7613012046404543`*^9, 3.7613051560949087`*^9, 
+  3.7613072873760586`*^9}]
 }, Open  ]]
 },
 WindowSize->{746, 628},
@@ -296,10 +297,10 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 7614, 161, 840, "Input"],
+Cell[558, 20, 7671, 161, 815, "Input"],
 Cell[CellGroupData[{
-Cell[8197, 185, 384, 9, 50, "Input"],
-Cell[8584, 196, 3262, 83, 164, "Output"]
+Cell[8254, 185, 384, 9, 50, "Input"],
+Cell[8641, 196, 3326, 84, 164, "Output"]
 }, Open  ]]
 }
 ]
