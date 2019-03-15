@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     67295,       1525]
-NotebookOptionsPosition[     66540,       1495]
-NotebookOutlinePosition[     66887,       1510]
-CellTagsIndexPosition[     66844,       1507]
+NotebookDataLength[     67240,       1537]
+NotebookOptionsPosition[     66483,       1507]
+NotebookOutlinePosition[     66829,       1522]
+CellTagsIndexPosition[     66786,       1519]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -504,8 +504,9 @@ Cell[BoxData[{
                FractionBox[
                 RowBox[{"xValues", "[", 
                  RowBox[{"[", "i", "]"}], "]"}], 
-                RowBox[{"yErrors", "[", 
-                 RowBox[{"[", "i", "]"}], "]"}]], ",", 
+                SuperscriptBox[
+                 RowBox[{"yErrors", "[", 
+                  RowBox[{"[", "i", "]"}], "]"}], "2"]], ",", 
                RowBox[{"{", 
                 RowBox[{"i", ",", "1", ",", "n"}], "}"}]}], "]"}]}], ";", 
             "\[IndentingNewLine]", 
@@ -515,8 +516,9 @@ Cell[BoxData[{
                FractionBox[
                 RowBox[{"yValues", "[", 
                  RowBox[{"[", "i", "]"}], "]"}], 
-                RowBox[{"yErrors", "[", 
-                 RowBox[{"[", "i", "]"}], "]"}]], ",", 
+                SuperscriptBox[
+                 RowBox[{"yErrors", "[", 
+                  RowBox[{"[", "i", "]"}], "]"}], "2"]], ",", 
                RowBox[{"{", 
                 RowBox[{"i", ",", "1", ",", "n"}], "}"}]}], "]"}]}], ";", 
             "\[IndentingNewLine]", 
@@ -526,8 +528,9 @@ Cell[BoxData[{
                FractionBox[
                 RowBox[{"xxValues", "[", 
                  RowBox[{"[", "i", "]"}], "]"}], 
-                RowBox[{"yErrors", "[", 
-                 RowBox[{"[", "i", "]"}], "]"}]], ",", 
+                SuperscriptBox[
+                 RowBox[{"yErrors", "[", 
+                  RowBox[{"[", "i", "]"}], "]"}], "2"]], ",", 
                RowBox[{"{", 
                 RowBox[{"i", ",", "1", ",", "n"}], "}"}]}], "]"}]}], ";", 
             "\[IndentingNewLine]", 
@@ -537,8 +540,9 @@ Cell[BoxData[{
                FractionBox[
                 RowBox[{"xyValues", "[", 
                  RowBox[{"[", "i", "]"}], "]"}], 
-                RowBox[{"yErrors", "[", 
-                 RowBox[{"[", "i", "]"}], "]"}]], ",", 
+                SuperscriptBox[
+                 RowBox[{"yErrors", "[", 
+                  RowBox[{"[", "i", "]"}], "]"}], "2"]], ",", 
                RowBox[{"{", 
                 RowBox[{"i", ",", "1", ",", "n"}], "}"}]}], "]"}]}], ";", 
             "\[IndentingNewLine]", 
@@ -546,8 +550,9 @@ Cell[BoxData[{
              RowBox[{"Sum", "[", 
               RowBox[{
                FractionBox["1", 
-                RowBox[{"yErrors", "[", 
-                 RowBox[{"[", "i", "]"}], "]"}]], ",", 
+                SuperscriptBox[
+                 RowBox[{"yErrors", "[", 
+                  RowBox[{"[", "i", "]"}], "]"}], "2"]], ",", 
                RowBox[{"{", 
                 RowBox[{"i", ",", "1", ",", "n"}], "}"}]}], "]"}]}], ";", 
             "\[IndentingNewLine]", "\[IndentingNewLine]", 
@@ -1119,7 +1124,8 @@ Cell[BoxData[{
    3.761071008354617*^9, 3.7610710507813587`*^9}, {3.761071169034028*^9, 
    3.7610711691791177`*^9}, {3.761130039280182*^9, 3.76113011026362*^9}, {
    3.7612062292084637`*^9, 3.761206232070879*^9}, {3.761206295789917*^9, 
-   3.761206373457223*^9}, {3.761215330728347*^9, 3.7612153332614574`*^9}}],
+   3.761206373457223*^9}, {3.761215330728347*^9, 3.7612153332614574`*^9}, {
+   3.761663469263509*^9, 3.7616634842914944`*^9}}],
 
 Cell[CellGroupData[{
 
@@ -1132,18 +1138,36 @@ Cell[BoxData[{
      ",", "5.93", ",", "7.01", ",", "8.24"}], "}"}]}], 
   ";"}], "\[IndentingNewLine]", 
  RowBox[{
-  RowBox[{"yValues", "=", 
-   RowBox[{"{", 
-    RowBox[{
-    "52.4", ",", "54.6", ",", "57.7", ",", "59.5", ",", "62.7", ",", "65.6", 
-     ",", "67.0", ",", "69.0", ",", "72.8", ",", "75.3"}], "}"}]}], 
-  ";"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"yValues", "=", 
+    RowBox[{"{", 
+     RowBox[{
+     "52.4", ",", "54.6", ",", "57.7", ",", "59.5", ",", "62.7", ",", "65.6", 
+      ",", "67.0", ",", "69.0", ",", "72.8", ",", "75.3"}], "}"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"xValues", "=", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"0.9980", 
+      RowBox[{"(*", 
+       RowBox[{",", "1.9910"}], "*)"}], ",", "1.5230", ",", "0.6530"}], "}"}],
+     "*", 
+    RowBox[{"10", "^", 
+     RowBox[{"-", "3"}]}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"yValues", "=", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"0.4082", "\[PlusMinus]", "0.0058"}], 
+      RowBox[{"(*", 
+       RowBox[{",", "0.46344"}], "*)"}], ",", 
+      RowBox[{"0.42163", "\[PlusMinus]", "0.0078"}], ",", 
+      RowBox[{"0.405011", "\[PlusMinus]", "0.020"}]}], "}"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
  RowBox[{"Regression", "[", 
-  RowBox[{"xValues", ",", "yValues"}], "]"}]}], "Input",
- CellChangeTimes->{{3.760362784606762*^9, 3.760362810991909*^9}, {
-   3.760420638571699*^9, 3.7604206761826963`*^9}, 3.7604334209476633`*^9, {
-   3.7604463218392534`*^9, 3.7604463232810464`*^9}, {3.7610711366227407`*^9, 
-   3.7610711378026257`*^9}}],
+  RowBox[{"xValues", ",", "yValues"}], "]"}]}], "Input"],
 
 Cell[BoxData[
  PanelBox[
@@ -1155,51 +1179,51 @@ Cell[BoxData[
              ToBoxes[
               TableForm[{
                 
-                Join[$CellContext`xDataInputFields$17872, \
-{$CellContext`addButton$17872, 
-                  Dynamic[$CellContext`xSum$17872]}], 
+                Join[$CellContext`xDataInputFields$25900, \
+{$CellContext`addButton$25900, 
+                  Dynamic[$CellContext`xSum$25900]}], 
                 
-                Join[$CellContext`yDataInputFields$17872, \
-{$CellContext`modeButton$17872, 
-                  Dynamic[$CellContext`ySum$17872]}], 
+                Join[$CellContext`yDataInputFields$25900, \
+{$CellContext`modeButton$25900, 
+                  Dynamic[$CellContext`ySum$25900]}], 
                 Join[
                  Table[
                   ReplaceAll[
                    Dynamic[
                     
-                    Part[$CellContext`yCalc$17872, $CellContext`tmp1$17872]], \
-$CellContext`tmp1$17872 -> $CellContext`i], {$CellContext`i, 
-                   1, $CellContext`n$17872}], {"", 
-                  Dynamic[$CellContext`yCalcSum$17872]}], 
+                    Part[$CellContext`yCalc$25900, $CellContext`tmp1$25900]], \
+$CellContext`tmp1$25900 -> $CellContext`i], {$CellContext`i, 
+                   1, $CellContext`n$25900}], {"", 
+                  Dynamic[$CellContext`yCalcSum$25900]}], 
                 Join[
                  Table[
                   ReplaceAll[
                    Dynamic[
                     
-                    Part[$CellContext`\[Sigma]y$17872, \
-$CellContext`tmp1$17872]], $CellContext`tmp1$17872 -> $CellContext`i], \
-{$CellContext`i, 1, $CellContext`n$17872}], {"", 
-                  Dynamic[$CellContext`\[Sigma]ySum$17872]}], 
+                    Part[$CellContext`\[Sigma]y$25900, \
+$CellContext`tmp1$25900]], $CellContext`tmp1$25900 -> $CellContext`i], \
+{$CellContext`i, 1, $CellContext`n$25900}], {"", 
+                  Dynamic[$CellContext`\[Sigma]ySum$25900]}], 
                 Join[
                  Table[
                   ReplaceAll[
                    Dynamic[
                     
-                    Part[$CellContext`xxValues$17872, \
-$CellContext`tmp1$17872]], $CellContext`tmp1$17872 -> $CellContext`i], \
-{$CellContext`i, 1, $CellContext`n$17872}], {"", 
-                  Dynamic[$CellContext`xxSum$17872]}], 
+                    Part[$CellContext`xxValues$25900, \
+$CellContext`tmp1$25900]], $CellContext`tmp1$25900 -> $CellContext`i], \
+{$CellContext`i, 1, $CellContext`n$25900}], {"", 
+                  Dynamic[$CellContext`xxSum$25900]}], 
                 Join[
                  Table[
                   ReplaceAll[
                    Dynamic[
                     
-                    Part[$CellContext`xyValues$17872, \
-$CellContext`tmp1$17872]], $CellContext`tmp1$17872 -> $CellContext`i], \
-{$CellContext`i, 1, $CellContext`n$17872}], {"", 
+                    Part[$CellContext`xyValues$25900, \
+$CellContext`tmp1$25900]], $CellContext`tmp1$25900 -> $CellContext`i], \
+{$CellContext`i, 1, $CellContext`n$25900}], {"", 
                   
-                  Dynamic[$CellContext`xySum$17872]}], \
-$CellContext`removeButtons$17872}, TableDirections -> Row, 
+                  Dynamic[$CellContext`xySum$25900]}], \
+$CellContext`removeButtons$25900}, TableDirections -> Row, 
                TableSpacing -> {3, 1}, 
                TableHeadings -> {{
                  "\!\(\*SubscriptBox[\(x\), \(i\)]\)", 
@@ -1211,7 +1235,7 @@ $CellContext`removeButtons$17872}, TableDirections -> Row,
                  Join[
                   
                   Table[$CellContext`i, {$CellContext`i, 
-                    1, $CellContext`n$17872}], {""}, {"Sum:"}]}], 
+                    1, $CellContext`n$25900}], {""}, {"Sum:"}]}], 
               StandardForm]]}, {
             InterpretationBox[
              StyleBox[
@@ -1224,17 +1248,17 @@ $CellContext`removeButtons$17872}, TableDirections -> Row,
                GridBox[{{
                   TemplateBox[{"\"a = \"", 
                     DynamicBox[
-                    ToBoxes[$CellContext`a$17872, StandardForm]], 
+                    ToBoxes[$CellContext`a$25900, StandardForm]], 
                     "\" \[PlusMinus] \"", 
                     DynamicBox[
-                    ToBoxes[$CellContext`\[Sigma]a$17872, StandardForm]]}, 
+                    ToBoxes[$CellContext`\[Sigma]a$25900, StandardForm]]}, 
                    "RowDefault"]}, {
                   TemplateBox[{"\"b = \"", 
                     DynamicBox[
-                    ToBoxes[$CellContext`b$17872, StandardForm]], 
+                    ToBoxes[$CellContext`b$25900, StandardForm]], 
                     "\" \[PlusMinus] \"", 
                     DynamicBox[
-                    ToBoxes[$CellContext`\[Sigma]b$17872, StandardForm]]}, 
+                    ToBoxes[$CellContext`\[Sigma]b$25900, StandardForm]]}, 
                    "RowDefault"]}}, 
                 GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
                 "Column", 
@@ -1251,20 +1275,20 @@ $CellContext`removeButtons$17872}, TableDirections -> Row,
                GridBox[{{
                   TemplateBox[{"\"r = \"", 
                     DynamicBox[
-                    ToBoxes[$CellContext`r$17872, StandardForm]]}, 
+                    ToBoxes[$CellContext`r$25900, StandardForm]]}, 
                    "RowDefault"]}, {
                   
                   TemplateBox[{
                    "\"\\!\\(\\*OverscriptBox[\\(x\\), \\(_\\)]\\) = \"", 
                     DynamicBox[
-                    ToBoxes[$CellContext`xM$17872, StandardForm]], 
+                    ToBoxes[$CellContext`xM$25900, StandardForm]], 
                     "\"; \\!\\(\\*OverscriptBox[\\(y\\), \\(_\\)]\\) = \"", 
                     DynamicBox[
-                    ToBoxes[$CellContext`yM$17872, StandardForm]], 
+                    ToBoxes[$CellContext`yM$25900, StandardForm]], 
                     "\"; \[CapitalDelta]c = \"", 
                     DynamicBox[
                     
-                    ToBoxes[$CellContext`\[CapitalDelta]c$17872, 
+                    ToBoxes[$CellContext`\[CapitalDelta]c$25900, 
                     StandardForm]]}, "RowDefault"]}}, 
                 GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
                 "Column", 
@@ -1298,19 +1322,19 @@ $CellContext`removeButtons$17872}, TableDirections -> Row,
 \[CapitalDelta]c)\""}, "RowDefault"]}, {
                   TemplateBox[{"\"y = (\"", 
                     DynamicBox[
-                    ToBoxes[$CellContext`b$17872, StandardForm]], 
+                    ToBoxes[$CellContext`b$25900, StandardForm]], 
                     "\" \[PlusMinus] \"", 
                     DynamicBox[
-                    ToBoxes[$CellContext`\[Sigma]b$17872, StandardForm]], 
+                    ToBoxes[$CellContext`\[Sigma]b$25900, StandardForm]], 
                     "\")*(x - \"", 
                     DynamicBox[
-                    ToBoxes[$CellContext`xM$17872, StandardForm]], "\") + \"", 
+                    ToBoxes[$CellContext`xM$25900, StandardForm]], "\") + \"", 
                     DynamicBox[
-                    ToBoxes[$CellContext`yM$17872, StandardForm]], 
+                    ToBoxes[$CellContext`yM$25900, StandardForm]], 
                     "\" \[PlusMinus] \"", 
                     DynamicBox[
                     
-                    ToBoxes[$CellContext`\[CapitalDelta]c$17872, 
+                    ToBoxes[$CellContext`\[CapitalDelta]c$25900, 
                     StandardForm]]}, "RowDefault"]}}, 
                 GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
                 "Column", 
@@ -1327,10 +1351,10 @@ $CellContext`removeButtons$17872}, TableDirections -> Row,
                GridBox[{{
                   ButtonBox["\"show/hide inner graphs\"", ButtonFunction :> If[
                     
-                    TrueQ[$CellContext`plot$17872 == \
-$CellContext`plotPart$17872], $CellContext`plot$17872 := \
-$CellContext`plotFull$17872, $CellContext`plot$17872 := \
-$CellContext`plotPart$17872], Appearance -> Automatic, Evaluator -> Automatic,
+                    TrueQ[$CellContext`plot$25900 == \
+$CellContext`plotPart$25900], $CellContext`plot$25900 := \
+$CellContext`plotFull$25900, $CellContext`plot$25900 := \
+$CellContext`plotPart$25900], Appearance -> Automatic, Evaluator -> Automatic,
                     Method -> "Preemptive"]}}, 
                 GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
                 "Column", 
@@ -1338,7 +1362,7 @@ $CellContext`plotPart$17872], Appearance -> Automatic, Evaluator -> Automatic,
                  "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
                "Column"]}, "RowDefault"]}, {
             DynamicBox[
-             ToBoxes[$CellContext`plot$17872, StandardForm]]}}, 
+             ToBoxes[$CellContext`plot$25900, StandardForm]]}}, 
           GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
           "Column", 
           GridBoxItemSize -> {
@@ -1349,19 +1373,7 @@ $CellContext`plotPart$17872], Appearance -> Automatic, Evaluator -> Automatic,
     GridBoxAlignment->{"Columns" -> {{Left}}},
     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
    "Column"]]], "Output",
- GeneratedCell->False,
- CellAutoOverwrite->False,
- CellChangeTimes->{
-  3.760973118954995*^9, {3.760978091259528*^9, 3.7609781172686*^9}, {
-   3.76097824370567*^9, 3.760978246941899*^9}, 3.760979717842067*^9, 
-   3.761069105849478*^9, 3.7610691643327208`*^9, {3.7610692130221367`*^9, 
-   3.7610692340404463`*^9}, 3.761069535246978*^9, {3.7610695661042976`*^9, 
-   3.7610695896107817`*^9}, {3.7610696782660065`*^9, 3.7610696982871947`*^9}, 
-   3.7610707186501446`*^9, 3.7610708102330065`*^9, 3.7610710529368486`*^9, {
-   3.7610711313739653`*^9, 3.761071138860628*^9}, 3.7610711749388666`*^9, 
-   3.7611251293157444`*^9, {3.761130090663684*^9, 3.7611301133601427`*^9}, 
-   3.761206186781114*^9, 3.7612062353757305`*^9, {3.7612063417975197`*^9, 
-   3.761206392916675*^9}, 3.761207230177619*^9, 3.761213249510502*^9}]
+ CellChangeTimes->{3.761663673840568*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -1493,8 +1505,8 @@ Cell[BoxData[
  CellChangeTimes->{{3.7604422599321084`*^9, 3.760442262020766*^9}, {
   3.760445444117958*^9, 3.760445444719486*^9}}]
 },
-WindowSize->{1264, 637},
-WindowMargins->{{-8, Automatic}, {Automatic, 0}},
+WindowSize->{638, 628},
+WindowMargins->{{Automatic, -7}, {Automatic, 0}},
 FrontEndVersion->"11.0 for Microsoft Windows (64-bit) (September 21, 2016)",
 StyleDefinitions->"Default.nb"
 ]
@@ -1509,24 +1521,24 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 50985, 1101, 4591, "Input"],
+Cell[558, 20, 51237, 1107, 5247, "Input"],
 Cell[CellGroupData[{
-Cell[51568, 1125, 831, 20, 69, "Input"],
-Cell[52402, 1147, 9519, 216, 428, "Output"]
+Cell[51820, 1131, 1294, 38, 164, "Input"],
+Cell[53117, 1171, 8747, 204, 624, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[61958, 1368, 1880, 46, 300, "Input"],
-Cell[63841, 1416, 910, 21, 78, "Output"]
+Cell[61901, 1380, 1880, 46, 300, "Input"],
+Cell[63784, 1428, 910, 21, 78, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[64788, 1442, 849, 22, 50, "Input"],
-Cell[65640, 1466, 375, 9, 36, "Output"]
+Cell[64731, 1454, 849, 22, 126, "Input"],
+Cell[65583, 1478, 375, 9, 36, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[66052, 1480, 128, 2, 30, "Input"],
-Cell[66183, 1484, 152, 3, 30, "Output"]
+Cell[65995, 1492, 128, 2, 30, "Input"],
+Cell[66126, 1496, 152, 3, 30, "Output"]
 }, Open  ]],
-Cell[66350, 1490, 186, 3, 30, "Input"]
+Cell[66293, 1502, 186, 3, 30, "Input"]
 }
 ]
 *)
