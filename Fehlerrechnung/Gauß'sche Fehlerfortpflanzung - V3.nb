@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     64890,       1380]
-NotebookOptionsPosition[     64447,       1361]
-NotebookOutlinePosition[     64826,       1377]
-CellTagsIndexPosition[     64783,       1374]
+NotebookDataLength[     66389,       1398]
+NotebookOptionsPosition[     65947,       1379]
+NotebookOutlinePosition[     66325,       1395]
+CellTagsIndexPosition[     66282,       1392]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -110,13 +110,13 @@ Cell[BoxData[{
           RowBox[{"value", "=", 
            RowBox[{"expr", "/.", 
             RowBox[{
-             RowBox[{"v_", "\[PlusMinus]", "e_"}], "\[Rule]", "v"}]}]}], ";", 
-          "\[IndentingNewLine]", 
+             RowBox[{"v_", "\[PlusMinus]", "e_"}], "\[RuleDelayed]", 
+             "v"}]}]}], ";", "\[IndentingNewLine]", 
           RowBox[{"error", "=", 
            RowBox[{"expr", "/.", 
             RowBox[{
-             RowBox[{"v_", "\[PlusMinus]", "e_"}], "\[Rule]", "e"}]}]}]}], 
-         ",", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+             RowBox[{"v_", "\[PlusMinus]", "e_"}], "\[RuleDelayed]", 
+             "e"}]}]}]}], ",", "\[IndentingNewLine]", 
          RowBox[{"{", 
           RowBox[{"_", ",", "_"}], "}"}], ",", 
          RowBox[{"(*", 
@@ -128,14 +128,14 @@ Cell[BoxData[{
            RowBox[{"expr", "/.", 
             RowBox[{
              RowBox[{"{", 
-              RowBox[{"v_", ",", "e_"}], "}"}], "\[Rule]", "v"}]}]}], ";", 
-          "\[IndentingNewLine]", 
+              RowBox[{"v_", ",", "e_"}], "}"}], "\[RuleDelayed]", "v"}]}]}], 
+          ";", "\[IndentingNewLine]", 
           RowBox[{"error", "=", 
            RowBox[{"expr", "/.", 
             RowBox[{
              RowBox[{"{", 
-              RowBox[{"v_", ",", "e_"}], "}"}], "\[Rule]", "e"}]}]}]}], ",", 
-         "\[IndentingNewLine]", "\[IndentingNewLine]", "_", ",", 
+              RowBox[{"v_", ",", "e_"}], "}"}], "\[RuleDelayed]", "e"}]}]}]}],
+          ",", "\[IndentingNewLine]", "_", ",", 
          RowBox[{"(*", 
           RowBox[{
            RowBox[{"e", ".", "g", ".", " ", "5"}], ";", " ", 
@@ -145,8 +145,8 @@ Cell[BoxData[{
          "\[IndentingNewLine]", 
          RowBox[{
           RowBox[{"value", "=", "expr"}], ";", "\[IndentingNewLine]", 
-          RowBox[{"error", "=", "0"}], ";"}]}], "\[IndentingNewLine]", "]"}], 
-       ";", "\[IndentingNewLine]", 
+          RowBox[{"error", "=", "0"}]}]}], "\[IndentingNewLine]", "]"}], ";", 
+       "\[IndentingNewLine]", 
        RowBox[{"Return", "[", 
         RowBox[{"{", 
          RowBox[{"value", ",", "error"}], "}"}], "]"}], ";"}]}], 
@@ -620,7 +620,7 @@ Cell[BoxData[{
            RowBox[{
             RowBox[{"{", 
              RowBox[{"result", ",", "digits", ",", "exponent"}], "}"}], ",", 
-            "\[IndentingNewLine]", "\[IndentingNewLine]", 
+            "\[IndentingNewLine]", 
             RowBox[{
              RowBox[{
               RowBox[{"{", 
@@ -634,7 +634,7 @@ Cell[BoxData[{
                   RowBox[{"Numeric", "[", 
                    RowBox[{"ReleaseHold", "[", "\[Sigma]f", "]"}], "]"}]}], 
                  "}"}], ",", "5"}], "]"}]}], ";", "\[IndentingNewLine]", 
-             "\[IndentingNewLine]", "\[IndentingNewLine]", 
+             "\[IndentingNewLine]", 
              RowBox[{"Framed", "@", 
               RowBox[{"Style", "[", 
                RowBox[{
@@ -733,9 +733,7 @@ Cell[BoxData[{
                     RowBox[{"[", "2", "]"}], "]"}], ",", 
                     RowBox[{"digits", "[", 
                     RowBox[{"[", "2", "]"}], "]"}]}], "]"}]}], ")"}], ",", 
-                    "\"\<) \>\"", ",", 
-                    SuperscriptBox["\"\<\[Times]10\>\"", 
-                    RowBox[{"ToString", "[", "exponent", "]"}]], ",", 
+                    "\"\<) \>\"", ",", "\"\<\[Times]10\>\"", ",", 
                     "\"\<   | \>\"", ",", 
                     RowBox[{
                     RowBox[{
@@ -885,7 +883,17 @@ Cell[BoxData[{
    3.7627744736526785`*^9}, {3.762774509802249*^9, 3.762774534492112*^9}, {
    3.762774564581154*^9, 3.762774729568499*^9}, {3.7627747653630114`*^9, 
    3.7627748039135237`*^9}, {3.762775325258036*^9, 3.7627755177795105`*^9}, 
-   3.7627755655703487`*^9}],
+   3.7627755655703487`*^9, {3.762804529046557*^9, 3.7628045386730046`*^9}, {
+   3.7628045733820047`*^9, 3.7628045786366224`*^9}, {3.762804615089542*^9, 
+   3.762804651016545*^9}, {3.7628047370490365`*^9, 3.762804737530246*^9}, {
+   3.762873460641944*^9, 3.7628735118622417`*^9}, {3.762941581910714*^9, 
+   3.7629415944312935`*^9}, {3.7629417114199266`*^9, 3.762941716234462*^9}, {
+   3.762941773159875*^9, 3.762941783806476*^9}, {3.762941902453204*^9, 
+   3.7629419210767703`*^9}, {3.7629419722255564`*^9, 
+   3.7629419794135036`*^9}, {3.762942019357759*^9, 3.7629420239221764`*^9}, {
+   3.762942328475441*^9, 3.7629423394210205`*^9}, {3.762942375898405*^9, 
+   3.7629424181785393`*^9}, {3.7629429862495975`*^9, 3.762942988129632*^9}, {
+   3.7629431721806536`*^9, 3.7629432106259184`*^9}}],
 
 Cell[CellGroupData[{
 
@@ -972,7 +980,8 @@ Cell[BoxData[
   3.7626121832731547`*^9}, {3.7626721470164146`*^9, 3.7626724939003053`*^9}, {
   3.7626726109341507`*^9, 3.7626726139201713`*^9}, {3.762672671259039*^9, 
   3.762672726330705*^9}, {3.7627631930058565`*^9, 3.76276320250721*^9}, {
-  3.7627756077111373`*^9, 3.762775613602789*^9}}],
+  3.7627756077111373`*^9, 3.762775613602789*^9}, {3.762942951262679*^9, 
+  3.7629429709132586`*^9}, {3.762943071536291*^9, 3.76294310979148*^9}}],
 
 Cell[BoxData[
  PanelBox[
@@ -1141,7 +1150,7 @@ Cell[BoxData[
                   SuperscriptBox["10", "\"2\""]}], 286.37770897832814`, 
                 AutoDelete -> True], 
                ScientificForm[#, 6, 
-                ExponentFunction -> ($CellContext`exponent$16494& )]& ]},
+                ExponentFunction -> ($CellContext`exponent$330845& )]& ]},
              "RowDefault"]},
            {
             TemplateBox[{"\"\[Sigma]f = \"",SqrtBox[
@@ -1211,7 +1220,7 @@ Cell[BoxData[
                   SuperscriptBox["10", "\"2\""]}], 34.63710626728221, 
                 AutoDelete -> True], 
                ScientificForm[#, 5, 
-                ExponentFunction -> ($CellContext`exponent$16494& )]& ]},
+                ExponentFunction -> ($CellContext`exponent$330845& )]& ]},
              "RowDefault"]},
            {
             InterpretationBox[
@@ -1232,9 +1241,8 @@ Cell[BoxData[
                 TagBox[
                  InterpretationBox[
                  "\"34.637\"", 34.63710626728221, AutoDelete -> True], 
-                 NumberForm[#, 5]& ]}],"\") \"",SuperscriptBox[
-              "\"\[Times]10\"", "\"2\""],"\"   | \"","12.094903053332061`",
-              "\"%\""},
+                 NumberForm[#, 5]& ]}],"\") \"","\"\[Times]10\"","\"   | \"",
+              "12.094903053332061`","\"%\""},
              "RowDefault"]}
           },
           DefaultBaseStyle->"Column",
@@ -1301,7 +1309,12 @@ Cell[BoxData[
    3.7627746747548513`*^9, {3.7627747096726313`*^9, 3.762774730787001*^9}, {
    3.7627747923011084`*^9, 3.7627748054598036`*^9}, 3.7627753585850835`*^9, {
    3.7627754282405453`*^9, 3.76277551909577*^9}, {3.7627755809364395`*^9, 
-   3.7627756177727013`*^9}}],
+   3.7627756177727013`*^9}, 3.762804654249159*^9, 3.7629414969408426`*^9, 
+   3.762941600632193*^9, 3.7629417173748164`*^9, {3.7629417854467173`*^9, 
+   3.7629418102636695`*^9}, 3.762941922263688*^9, 3.7629419805140142`*^9, 
+   3.7629420256873837`*^9, 3.7629423411809177`*^9, 3.7629424221344323`*^9, {
+   3.7629430096134405`*^9, 3.7629430352577877`*^9}, 3.7629430771781096`*^9, 
+   3.76294311068189*^9, 3.7629431830931296`*^9, 3.7629432185137796`*^9}],
 
 Cell[BoxData[
  RowBox[{"{", 
@@ -1356,11 +1369,16 @@ Cell[BoxData[
    3.7627746747548513`*^9, {3.7627747096726313`*^9, 3.762774730787001*^9}, {
    3.7627747923011084`*^9, 3.7627748054598036`*^9}, 3.7627753585850835`*^9, {
    3.7627754282405453`*^9, 3.76277551909577*^9}, {3.7627755809364395`*^9, 
-   3.7627756178195653`*^9}}]
+   3.7627756177727013`*^9}, 3.762804654249159*^9, 3.7629414969408426`*^9, 
+   3.762941600632193*^9, 3.7629417173748164`*^9, {3.7629417854467173`*^9, 
+   3.7629418102636695`*^9}, 3.762941922263688*^9, 3.7629419805140142`*^9, 
+   3.7629420256873837`*^9, 3.7629423411809177`*^9, 3.7629424221344323`*^9, {
+   3.7629430096134405`*^9, 3.7629430352577877`*^9}, 3.7629430771781096`*^9, 
+   3.76294311068189*^9, 3.7629431830931296`*^9, 3.762943218560644*^9}]
 }, Open  ]]
 },
-WindowSize->{1280, 637},
-WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+WindowSize->{1264, 637},
+WindowMargins->{{-8, Automatic}, {Automatic, 0}},
 Magnification:>0.95 Inherited,
 FrontEndVersion->"11.0 for Microsoft Windows (64-bit) (September 21, 2016)",
 StyleDefinitions->"Default.nb"
@@ -1376,11 +1394,11 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 40961, 867, 2804, "Input"],
+Cell[558, 20, 41559, 875, 2732, "Input"],
 Cell[CellGroupData[{
-Cell[41544, 891, 3278, 83, 178, "Input"],
-Cell[44825, 976, 15788, 327, 367, "Output"],
-Cell[60616, 1305, 3815, 53, 28, "Output"]
+Cell[42142, 899, 3374, 84, 178, "Input"],
+Cell[45519, 985, 16173, 331, 367, "Output"],
+Cell[61695, 1318, 4236, 58, 28, "Output"]
 }, Open  ]]
 }
 ]

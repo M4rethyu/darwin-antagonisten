@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     80892,       1709]
-NotebookOptionsPosition[     80599,       1695]
-NotebookOutlinePosition[     80947,       1710]
-CellTagsIndexPosition[     80904,       1707]
+NotebookDataLength[     91785,       2021]
+NotebookOptionsPosition[     91372,       2003]
+NotebookOutlinePosition[     91720,       2018]
+CellTagsIndexPosition[     91677,       2015]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -1658,6 +1658,8 @@ Regression.\>\"", ",",
    3.7629401489968033`*^9, 3.762940236585832*^9}, {3.762940293834927*^9, 
    3.762940343186092*^9}}],
 
+Cell[CellGroupData[{
+
 Cell[BoxData[
  RowBox[{
   RowBox[{"(*", 
@@ -1691,7 +1693,313 @@ Cell[BoxData[
    3.7629381675004797`*^9, 3.762938188628409*^9}, {3.7629385144748583`*^9, 
    3.762938516942745*^9}, {3.762938574724871*^9, 3.7629385767472878`*^9}, {
    3.762939189938131*^9, 3.7629391989707785`*^9}, {3.7629402486501675`*^9, 
-   3.762940250995102*^9}, {3.762940348860468*^9, 3.762940408099846*^9}}]
+   3.762940250995102*^9}, {3.762940348860468*^9, 3.762940408099846*^9}}],
+
+Cell[BoxData[
+ PanelBox[
+  TagBox[GridBox[{
+     {
+      FrameBox[
+       TagBox[GridBox[{
+          {
+           StyleBox["\<\"Input:\"\>",
+            StripOnInput->False,
+            FontSize->15]},
+          {
+           DynamicBox[ToBoxes[
+             TableForm[{
+               Join[
+                Table[
+                 ReplaceAll[
+                  Dynamic[
+                   Style[
+                    
+                    Part[$CellContext`xValues$331049, \
+$CellContext`tmp1$331049], 
+                    If[
+                    
+                    Part[$CellContext`usedValues$331049, \
+$CellContext`tmp1$331049], Black, 
+                    GrayLevel[
+                    0.6]]]], $CellContext`tmp1$331049 -> $CellContext`i], \
+{$CellContext`i, 1, $CellContext`n$331049}], {"", 
+                 Dynamic[$CellContext`xSum$331049]}], 
+               Join[
+                Table[
+                 ReplaceAll[
+                  Dynamic[
+                   Style[
+                    Row[{
+                    
+                    Part[$CellContext`yValues$331049, \
+$CellContext`tmp1$331049], 
+                    If[$CellContext`withErrors$331049, 
+                    Row[{"\[PlusMinus]", 
+                    
+                    Part[$CellContext`yErrors$331049, \
+$CellContext`tmp1$331049]}]]}], 
+                    If[
+                    
+                    Part[$CellContext`usedValues$331049, \
+$CellContext`tmp1$331049], Black, 
+                    GrayLevel[
+                    0.6]]]], $CellContext`tmp1$331049 -> $CellContext`i], \
+{$CellContext`i, 1, $CellContext`n$331049}], {"", 
+                 Dynamic[$CellContext`ySum$331049]}], 
+               Join[
+                Table[
+                 ReplaceAll[
+                  Dynamic[
+                   Style[
+                    Part[$CellContext`yCalc$331049, $CellContext`tmp1$331049], 
+                    If[
+                    
+                    Part[$CellContext`usedValues$331049, \
+$CellContext`tmp1$331049], Black, 
+                    GrayLevel[
+                    0.6]]]], $CellContext`tmp1$331049 -> $CellContext`i], \
+{$CellContext`i, 1, $CellContext`n$331049}], {"", 
+                 Dynamic[$CellContext`yCalcSum$331049]}], 
+               Join[
+                Table[
+                 ReplaceAll[
+                  Dynamic[
+                   Style[
+                    
+                    Part[$CellContext`\[Sigma]y$331049, \
+$CellContext`tmp1$331049], 
+                    If[
+                    
+                    Part[$CellContext`usedValues$331049, \
+$CellContext`tmp1$331049], Black, 
+                    GrayLevel[
+                    0.6]]]], $CellContext`tmp1$331049 -> $CellContext`i], \
+{$CellContext`i, 1, $CellContext`n$331049}], {"", 
+                 Dynamic[$CellContext`\[Sigma]ySum$331049]}], 
+               Join[
+                Table[
+                 ReplaceAll[
+                  Dynamic[
+                   Style[
+                    
+                    Part[$CellContext`xxValues$331049, \
+$CellContext`tmp1$331049], 
+                    If[
+                    
+                    Part[$CellContext`usedValues$331049, \
+$CellContext`tmp1$331049], Black, 
+                    GrayLevel[
+                    0.6]]]], $CellContext`tmp1$331049 -> $CellContext`i], \
+{$CellContext`i, 1, $CellContext`n$331049}], {"", 
+                 Dynamic[$CellContext`xxSum$331049]}], 
+               Join[
+                Table[
+                 ReplaceAll[
+                  Dynamic[
+                   Style[
+                    
+                    Part[$CellContext`xyValues$331049, \
+$CellContext`tmp1$331049], 
+                    If[
+                    
+                    Part[$CellContext`usedValues$331049, \
+$CellContext`tmp1$331049], Black, 
+                    GrayLevel[
+                    0.6]]]], $CellContext`tmp1$331049 -> $CellContext`i], \
+{$CellContext`i, 1, $CellContext`n$331049}], {"", 
+                 
+                 Dynamic[$CellContext`xySum$331049]}], \
+$CellContext`toggleBoxes$331049}, TableDirections -> Row, 
+              TableSpacing -> {3, 1}, 
+              TableHeadings -> {{
+                "\!\(\*SubscriptBox[\(x\), \(i\)]\)", 
+                 "\!\(\*SubscriptBox[\(y\), \(i\)]\)", "y", 
+                 "(y-\!\(\*SubscriptBox[\(y\), \
+\(i\)]\)\!\(\*SuperscriptBox[\()\), \(2\)]\)", 
+                 "\!\(\*SuperscriptBox[SubscriptBox[\(x\), \(i\)], \(2\)]\)", 
+                 "\!\(\*SubscriptBox[\(x\), \
+\(i\)]\)*\!\(\*SubscriptBox[\(y\), \(i\)]\)"}, 
+                Join[
+                 
+                 Table[$CellContext`i, {$CellContext`i, 
+                   1, $CellContext`n$331049}], {""}, {"Sum:"}]}], 
+             StandardForm],
+            ImageSizeCache->{519., {64., 70.}}]},
+          {
+           TagBox[GridBox[{
+              {
+               DynamicBox[ToBoxes[
+                 If[$CellContext`notEnoughPoints$331049, 
+                  Style[
+                  "There must be at least 3 Datapoints to get\na meaningful \
+result out of linear Regression.", FontSize -> 20, Red], ""], StandardForm],
+                ImageSizeCache->{0., {0., 6.}}]},
+              {
+               DynamicBox[ToBoxes[
+                 If[
+                  And[$CellContext`withErrors$331049, Length[
+                    Select[
+                    Table[
+                    
+                    Part[$CellContext`yErrors$331049, $CellContext`i], \
+{$CellContext`i, $CellContext`usedIndices$331049}], # == 0& ]] > 0], 
+                  Style[
+                  "No y-Error may be 0 for weighted linear Regression.", 
+                   FontSize -> 20, Red], ""], StandardForm],
+                ImageSizeCache->{0., {0., 6.}}]}
+             },
+             DefaultBaseStyle->"Column",
+             GridBoxAlignment->{"Columns" -> {{Left}}},
+             
+             GridBoxItemSize->{
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+            "Column"]}
+         },
+         DefaultBaseStyle->"Column",
+         GridBoxAlignment->{"Columns" -> {{Center}}},
+         GridBoxItemSize->{
+          "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+        "Column"],
+       StripOnInput->False]},
+     {
+      InterpretationBox[
+       StyleBox[
+        GraphicsBox[{},
+         BaselinePosition->Baseline,
+         ImageSize->{5, 0}],
+        CacheGraphics->False],
+       Spacer[5]]},
+     {
+      FrameBox[
+       TagBox[GridBox[{
+          {
+           StyleBox["\<\"Options:\"\>",
+            StripOnInput->False,
+            FontSize->15]},
+          {
+           TagBox[GridBox[{
+              {"\<\"Use Y-Errors:\"\>", 
+               
+               CheckboxBox[
+                Dynamic[$CellContext`withErrors$331049, \
+($CellContext`withErrors$331049 = #; $CellContext`refresh$331049; 
+                 Null)& ]], "\<\"Show Graph:\"\>", 
+               
+               CheckboxBox[
+                Dynamic[$CellContext`showGraph$331049, \
+($CellContext`showGraph$331049 = #; Null)& ]], "", "", "", ""},
+              {"\<\"Show inner Graphs:\"\>", 
+               
+               CheckboxBox[
+                Dynamic[$CellContext`innerGraphs$331049, \
+($CellContext`innerGraphs$331049 = #; Null)& ]], "\<\"Show Point Marks:\"\>", 
+               
+               CheckboxBox[
+                Dynamic[$CellContext`pointMarks$331049, \
+($CellContext`pointMarks$331049 = #; Null)& ]], "\<\"Supress Zero:\"\>", 
+               
+               CheckboxBox[
+                Dynamic[$CellContext`zeroSuppressed$331049, \
+($CellContext`zeroSuppressed$331049 = #; $CellContext`redraw$331049; 
+                 Null)& ]], "\<\"Consider Unused Points:\"\>", 
+               
+               CheckboxBox[
+                Dynamic[$CellContext`showUnusedPoints$331049, \
+($CellContext`showUnusedPoints$331049 = #; $CellContext`redraw$331049; 
+                 Null)& ]]}
+             },
+             AutoDelete->False,
+             
+             GridBoxAlignment->{
+              "Columns" -> {{Right, Left}}, "Rows" -> {{Center}}},
+             
+             GridBoxItemSize->{
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+            "Grid"]}
+         },
+         DefaultBaseStyle->"Column",
+         GridBoxAlignment->{"Columns" -> {{Center}}},
+         GridBoxItemSize->{
+          "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+        "Column"],
+       StripOnInput->False]},
+     {
+      InterpretationBox[
+       StyleBox[
+        GraphicsBox[{},
+         BaselinePosition->Baseline,
+         ImageSize->{5, 0}],
+        CacheGraphics->False],
+       Spacer[5]]},
+     {
+      FrameBox[
+       TagBox[GridBox[{
+          {
+           StyleBox["\<\"Results:\"\>",
+            StripOnInput->False,
+            FontSize->15]},
+          {
+           DynamicBox[ToBoxes[
+             If[
+              
+              Not[$CellContext`notEnoughPoints$331049], \
+$CellContext`results$331058, ""], StandardForm],
+            ImageSizeCache->{339., {40., 46.}}]}
+         },
+         DefaultBaseStyle->"Column",
+         GridBoxAlignment->{"Columns" -> {{Center}}},
+         GridBoxItemSize->{
+          "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+        "Column"],
+       StripOnInput->False]},
+     {
+      InterpretationBox[
+       StyleBox[
+        GraphicsBox[{},
+         BaselinePosition->Baseline,
+         ImageSize->{5, 0}],
+        CacheGraphics->False],
+       Spacer[5]]},
+     {
+      FrameBox[
+       TagBox[GridBox[{
+          {
+           StyleBox["\<\"Graph:\"\>",
+            StripOnInput->False,
+            FontSize->15]},
+          {
+           DynamicBox[ToBoxes[
+             If[
+              
+              Not[$CellContext`notEnoughPoints$331049], \
+$CellContext`graph$331058, ""], StandardForm],
+            ImageSizeCache->{500., {148., 154.}}]}
+         },
+         DefaultBaseStyle->"Column",
+         GridBoxAlignment->{"Columns" -> {{Center}}},
+         GridBoxItemSize->{
+          "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+        "Column"],
+       StripOnInput->False]}
+    },
+    DefaultBaseStyle->"Column",
+    GridBoxAlignment->{"Columns" -> {{Left}}},
+    GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+   "Column"]]], "Output",
+ CellChangeTimes->{3.7629429025547347`*^9, 3.7629432321094894`*^9, 
+  3.7629432716763477`*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"0.594276819205943`", ",", "0.024894075198802088`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"0.0076665449012377224`", ",", "0.014760842427021983`"}], "}"}], 
+   ",", "0.00020870239065680837`"}], "}"}]], "Output",
+ CellChangeTimes->{3.7629429025547347`*^9, 3.7629432321094894`*^9, 
+  3.762943271832551*^9}]
+}, Open  ]]
 },
 WindowSize->{1280, 637},
 WindowMargins->{{-8, Automatic}, {Automatic, -8}},
@@ -1710,7 +2018,11 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[558, 20, 78458, 1638, 5216, "Input"],
-Cell[79019, 1660, 1576, 33, 126, "Input"]
+Cell[CellGroupData[{
+Cell[79041, 1662, 1576, 33, 126, "Input"],
+Cell[80620, 1697, 10355, 292, 824, "Output"],
+Cell[90978, 1991, 378, 9, 30, "Output"]
+}, Open  ]]
 }
 ]
 *)
