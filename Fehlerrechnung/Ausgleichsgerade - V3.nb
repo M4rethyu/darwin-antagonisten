@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     91785,       2021]
-NotebookOptionsPosition[     91372,       2003]
-NotebookOutlinePosition[     91720,       2018]
-CellTagsIndexPosition[     91677,       2015]
+NotebookDataLength[     91633,       2010]
+NotebookOptionsPosition[     91221,       1992]
+NotebookOutlinePosition[     91568,       2007]
+CellTagsIndexPosition[     91525,       2004]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -105,10 +105,12 @@ Cell[BoxData[{
                 RowBox[{"[", "i", "]"}], "]"}], ",", 
                RowBox[{"yErrors", "[", 
                 RowBox[{"[", "i", "]"}], "]"}]}], "}"}], "=", 
-             RowBox[{"ValueAndError", "[", 
-              RowBox[{"ReleaseHold", "[", 
-               RowBox[{"y", "[", 
-                RowBox[{"[", "i", "]"}], "]"}], "]"}], "]"}]}], ";"}]}], 
+             RowBox[{
+              RowBox[{"ValueAndError", "[", 
+               RowBox[{"ReleaseHold", "[", 
+                RowBox[{"y", "[", 
+                 RowBox[{"[", "i", "]"}], "]"}], "]"}], "]"}], "/.", 
+              RowBox[{"PlusMinus", "->", "List"}]}]}], ";"}]}], 
           "\[IndentingNewLine]", "]"}]}], "]"}]}], "]"}], ";", " ", 
      RowBox[{"(*", 
       RowBox[{
@@ -1656,7 +1658,7 @@ Regression.\>\"", ",",
    3.7629398874234667`*^9}, {3.76293992571581*^9, 3.76293994991497*^9}, {
    3.762940001742096*^9, 3.762940020387171*^9}, 3.762940117907215*^9, {
    3.7629401489968033`*^9, 3.762940236585832*^9}, {3.762940293834927*^9, 
-   3.762940343186092*^9}}],
+   3.762940343186092*^9}, {3.7632098443659487`*^9, 3.7632098539858027`*^9}}],
 
 Cell[CellGroupData[{
 
@@ -1713,103 +1715,93 @@ Cell[BoxData[
                  ReplaceAll[
                   Dynamic[
                    Style[
-                    
-                    Part[$CellContext`xValues$331049, \
-$CellContext`tmp1$331049], 
+                    Part[$CellContext`xValues$2995, $CellContext`tmp1$2995], 
                     If[
                     
-                    Part[$CellContext`usedValues$331049, \
-$CellContext`tmp1$331049], Black, 
+                    Part[$CellContext`usedValues$2995, \
+$CellContext`tmp1$2995], Black, 
                     GrayLevel[
-                    0.6]]]], $CellContext`tmp1$331049 -> $CellContext`i], \
-{$CellContext`i, 1, $CellContext`n$331049}], {"", 
-                 Dynamic[$CellContext`xSum$331049]}], 
+                    0.6]]]], $CellContext`tmp1$2995 -> $CellContext`i], \
+{$CellContext`i, 1, $CellContext`n$2995}], {"", 
+                 Dynamic[$CellContext`xSum$2995]}], 
                Join[
                 Table[
                  ReplaceAll[
                   Dynamic[
                    Style[
                     Row[{
-                    
-                    Part[$CellContext`yValues$331049, \
-$CellContext`tmp1$331049], 
-                    If[$CellContext`withErrors$331049, 
+                    Part[$CellContext`yValues$2995, $CellContext`tmp1$2995], 
+                    If[$CellContext`withErrors$2995, 
                     Row[{"\[PlusMinus]", 
                     
-                    Part[$CellContext`yErrors$331049, \
-$CellContext`tmp1$331049]}]]}], 
+                    Part[$CellContext`yErrors$2995, \
+$CellContext`tmp1$2995]}]]}], 
                     If[
                     
-                    Part[$CellContext`usedValues$331049, \
-$CellContext`tmp1$331049], Black, 
+                    Part[$CellContext`usedValues$2995, \
+$CellContext`tmp1$2995], Black, 
                     GrayLevel[
-                    0.6]]]], $CellContext`tmp1$331049 -> $CellContext`i], \
-{$CellContext`i, 1, $CellContext`n$331049}], {"", 
-                 Dynamic[$CellContext`ySum$331049]}], 
+                    0.6]]]], $CellContext`tmp1$2995 -> $CellContext`i], \
+{$CellContext`i, 1, $CellContext`n$2995}], {"", 
+                 Dynamic[$CellContext`ySum$2995]}], 
                Join[
                 Table[
                  ReplaceAll[
                   Dynamic[
                    Style[
-                    Part[$CellContext`yCalc$331049, $CellContext`tmp1$331049], 
+                    Part[$CellContext`yCalc$2995, $CellContext`tmp1$2995], 
                     If[
                     
-                    Part[$CellContext`usedValues$331049, \
-$CellContext`tmp1$331049], Black, 
+                    Part[$CellContext`usedValues$2995, \
+$CellContext`tmp1$2995], Black, 
                     GrayLevel[
-                    0.6]]]], $CellContext`tmp1$331049 -> $CellContext`i], \
-{$CellContext`i, 1, $CellContext`n$331049}], {"", 
-                 Dynamic[$CellContext`yCalcSum$331049]}], 
+                    0.6]]]], $CellContext`tmp1$2995 -> $CellContext`i], \
+{$CellContext`i, 1, $CellContext`n$2995}], {"", 
+                 Dynamic[$CellContext`yCalcSum$2995]}], 
                Join[
                 Table[
                  ReplaceAll[
                   Dynamic[
                    Style[
-                    
-                    Part[$CellContext`\[Sigma]y$331049, \
-$CellContext`tmp1$331049], 
+                    Part[$CellContext`\[Sigma]y$2995, $CellContext`tmp1$2995], 
                     If[
                     
-                    Part[$CellContext`usedValues$331049, \
-$CellContext`tmp1$331049], Black, 
+                    Part[$CellContext`usedValues$2995, \
+$CellContext`tmp1$2995], Black, 
                     GrayLevel[
-                    0.6]]]], $CellContext`tmp1$331049 -> $CellContext`i], \
-{$CellContext`i, 1, $CellContext`n$331049}], {"", 
-                 Dynamic[$CellContext`\[Sigma]ySum$331049]}], 
+                    0.6]]]], $CellContext`tmp1$2995 -> $CellContext`i], \
+{$CellContext`i, 1, $CellContext`n$2995}], {"", 
+                 Dynamic[$CellContext`\[Sigma]ySum$2995]}], 
                Join[
                 Table[
                  ReplaceAll[
                   Dynamic[
                    Style[
-                    
-                    Part[$CellContext`xxValues$331049, \
-$CellContext`tmp1$331049], 
+                    Part[$CellContext`xxValues$2995, $CellContext`tmp1$2995], 
                     If[
                     
-                    Part[$CellContext`usedValues$331049, \
-$CellContext`tmp1$331049], Black, 
+                    Part[$CellContext`usedValues$2995, \
+$CellContext`tmp1$2995], Black, 
                     GrayLevel[
-                    0.6]]]], $CellContext`tmp1$331049 -> $CellContext`i], \
-{$CellContext`i, 1, $CellContext`n$331049}], {"", 
-                 Dynamic[$CellContext`xxSum$331049]}], 
+                    0.6]]]], $CellContext`tmp1$2995 -> $CellContext`i], \
+{$CellContext`i, 1, $CellContext`n$2995}], {"", 
+                 Dynamic[$CellContext`xxSum$2995]}], 
                Join[
                 Table[
                  ReplaceAll[
                   Dynamic[
                    Style[
-                    
-                    Part[$CellContext`xyValues$331049, \
-$CellContext`tmp1$331049], 
+                    Part[$CellContext`xyValues$2995, $CellContext`tmp1$2995], 
                     If[
                     
-                    Part[$CellContext`usedValues$331049, \
-$CellContext`tmp1$331049], Black, 
+                    Part[$CellContext`usedValues$2995, \
+$CellContext`tmp1$2995], Black, 
                     GrayLevel[
-                    0.6]]]], $CellContext`tmp1$331049 -> $CellContext`i], \
-{$CellContext`i, 1, $CellContext`n$331049}], {"", 
+                    0.6]]]], $CellContext`tmp1$2995 -> $CellContext`i], \
+{$CellContext`i, 1, $CellContext`n$2995}], {"", 
                  
-                 Dynamic[$CellContext`xySum$331049]}], \
-$CellContext`toggleBoxes$331049}, TableDirections -> Row, 
+                 Dynamic[$CellContext`xySum$2995]}], \
+$CellContext`toggleBoxes$2995}, TableDirections -> Row, 
               TableSpacing -> {3, 1}, 
               TableHeadings -> {{
                 "\!\(\*SubscriptBox[\(x\), \(i\)]\)", 
@@ -1822,14 +1814,13 @@ $CellContext`toggleBoxes$331049}, TableDirections -> Row,
                 Join[
                  
                  Table[$CellContext`i, {$CellContext`i, 
-                   1, $CellContext`n$331049}], {""}, {"Sum:"}]}], 
-             StandardForm],
-            ImageSizeCache->{519., {64., 70.}}]},
+                   1, $CellContext`n$2995}], {""}, {"Sum:"}]}], StandardForm],
+            ImageSizeCache->{519., {63.5, 69.5}}]},
           {
            TagBox[GridBox[{
               {
                DynamicBox[ToBoxes[
-                 If[$CellContext`notEnoughPoints$331049, 
+                 If[$CellContext`notEnoughPoints$2995, 
                   Style[
                   "There must be at least 3 Datapoints to get\na meaningful \
 result out of linear Regression.", FontSize -> 20, Red], ""], StandardForm],
@@ -1837,12 +1828,12 @@ result out of linear Regression.", FontSize -> 20, Red], ""], StandardForm],
               {
                DynamicBox[ToBoxes[
                  If[
-                  And[$CellContext`withErrors$331049, Length[
+                  And[$CellContext`withErrors$2995, Length[
                     Select[
                     Table[
                     
-                    Part[$CellContext`yErrors$331049, $CellContext`i], \
-{$CellContext`i, $CellContext`usedIndices$331049}], # == 0& ]] > 0], 
+                    Part[$CellContext`yErrors$2995, $CellContext`i], \
+{$CellContext`i, $CellContext`usedIndices$2995}], # == 0& ]] > 0], 
                   Style[
                   "No y-Error may be 0 for weighted linear Regression.", 
                    FontSize -> 20, Red], ""], StandardForm],
@@ -1881,32 +1872,31 @@ result out of linear Regression.", FontSize -> 20, Red], ""], StandardForm],
               {"\<\"Use Y-Errors:\"\>", 
                
                CheckboxBox[
-                Dynamic[$CellContext`withErrors$331049, \
-($CellContext`withErrors$331049 = #; $CellContext`refresh$331049; 
+                Dynamic[$CellContext`withErrors$2995, \
+($CellContext`withErrors$2995 = #; $CellContext`refresh$2995; 
                  Null)& ]], "\<\"Show Graph:\"\>", 
                
                CheckboxBox[
-                Dynamic[$CellContext`showGraph$331049, \
-($CellContext`showGraph$331049 = #; Null)& ]], "", "", "", ""},
+                Dynamic[$CellContext`showGraph$2995, \
+($CellContext`showGraph$2995 = #; Null)& ]], "", "", "", ""},
               {"\<\"Show inner Graphs:\"\>", 
                
                CheckboxBox[
-                Dynamic[$CellContext`innerGraphs$331049, \
-($CellContext`innerGraphs$331049 = #; Null)& ]], "\<\"Show Point Marks:\"\>", 
+                Dynamic[$CellContext`innerGraphs$2995, \
+($CellContext`innerGraphs$2995 = #; Null)& ]], "\<\"Show Point Marks:\"\>", 
                
                CheckboxBox[
-                Dynamic[$CellContext`pointMarks$331049, \
-($CellContext`pointMarks$331049 = #; Null)& ]], "\<\"Supress Zero:\"\>", 
+                Dynamic[$CellContext`pointMarks$2995, \
+($CellContext`pointMarks$2995 = #; Null)& ]], "\<\"Supress Zero:\"\>", 
                
                CheckboxBox[
-                Dynamic[$CellContext`zeroSuppressed$331049, \
-($CellContext`zeroSuppressed$331049 = #; $CellContext`redraw$331049; 
+                Dynamic[$CellContext`zeroSuppressed$2995, \
+($CellContext`zeroSuppressed$2995 = #; $CellContext`redraw$2995; 
                  Null)& ]], "\<\"Consider Unused Points:\"\>", 
                
                CheckboxBox[
-                Dynamic[$CellContext`showUnusedPoints$331049, \
-($CellContext`showUnusedPoints$331049 = #; $CellContext`redraw$331049; 
-                 Null)& ]]}
+                Dynamic[$CellContext`showUnusedPoints$2995, \
+($CellContext`showUnusedPoints$2995 = #; $CellContext`redraw$2995; Null)& ]]}
              },
              AutoDelete->False,
              
@@ -1942,9 +1932,9 @@ result out of linear Regression.", FontSize -> 20, Red], ""], StandardForm],
            DynamicBox[ToBoxes[
              If[
               
-              Not[$CellContext`notEnoughPoints$331049], \
-$CellContext`results$331058, ""], StandardForm],
-            ImageSizeCache->{339., {40., 46.}}]}
+              Not[$CellContext`notEnoughPoints$2995], \
+$CellContext`results$3004, ""], StandardForm],
+            ImageSizeCache->{345., {39.5, 45.5}}]}
          },
          DefaultBaseStyle->"Column",
          GridBoxAlignment->{"Columns" -> {{Center}}},
@@ -1970,10 +1960,9 @@ $CellContext`results$331058, ""], StandardForm],
           {
            DynamicBox[ToBoxes[
              If[
-              
-              Not[$CellContext`notEnoughPoints$331049], \
-$CellContext`graph$331058, ""], StandardForm],
-            ImageSizeCache->{500., {148., 154.}}]}
+              Not[$CellContext`notEnoughPoints$2995], $CellContext`graph$3004,
+               ""], StandardForm],
+            ImageSizeCache->{500., {150., 154.}}]}
          },
          DefaultBaseStyle->"Column",
          GridBoxAlignment->{"Columns" -> {{Center}}},
@@ -1986,8 +1975,8 @@ $CellContext`graph$331058, ""], StandardForm],
     GridBoxAlignment->{"Columns" -> {{Left}}},
     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
    "Column"]]], "Output",
- CellChangeTimes->{3.7629429025547347`*^9, 3.7629432321094894`*^9, 
-  3.7629432716763477`*^9}],
+ CellChangeTimes->{3.762940487506779*^9, 3.7632098715325994`*^9, 
+  3.7632099988205137`*^9}],
 
 Cell[BoxData[
  RowBox[{"{", 
@@ -1997,12 +1986,12 @@ Cell[BoxData[
    RowBox[{"{", 
     RowBox[{"0.0076665449012377224`", ",", "0.014760842427021983`"}], "}"}], 
    ",", "0.00020870239065680837`"}], "}"}]], "Output",
- CellChangeTimes->{3.7629429025547347`*^9, 3.7629432321094894`*^9, 
-  3.762943271832551*^9}]
+ CellChangeTimes->{3.762940487506779*^9, 3.7632098715325994`*^9, 
+  3.7632099991493187`*^9}]
 }, Open  ]]
 },
-WindowSize->{1280, 637},
-WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+WindowSize->{1264, 637},
+WindowMargins->{{-8, Automatic}, {Automatic, 0}},
 FrontEndVersion->"11.0 for Microsoft Windows (64-bit) (September 21, 2016)",
 StyleDefinitions->"Default.nb"
 ]
@@ -2017,11 +2006,11 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 78458, 1638, 5216, "Input"],
+Cell[558, 20, 78594, 1640, 5216, "Input"],
 Cell[CellGroupData[{
-Cell[79041, 1662, 1576, 33, 126, "Input"],
-Cell[80620, 1697, 10355, 292, 824, "Output"],
-Cell[90978, 1991, 378, 9, 30, "Output"]
+Cell[79177, 1664, 1576, 33, 126, "Input"],
+Cell[80756, 1699, 10068, 279, 826, "Output"],
+Cell[90827, 1980, 378, 9, 30, "Output"]
 }, Open  ]]
 }
 ]
